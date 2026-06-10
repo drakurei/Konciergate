@@ -1,20 +1,43 @@
 "use client";
 
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useTranslations } from "next-intl";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Button } from "@/components/ui/Button";
 
+/** Chemin de la vidéo de fond. Déposez le fichier ici pour l'activer. */
+const HERO_VIDEO = "/video/hero.mp4";
+const HERO_POSTER = "/video/hero-poster.jpg";
+
 /**
- * Hero plein écran. La structure <video> est prête : déposez votre
- * fichier dans /public/video/hero.mp4 et /public/video/hero-poster.jpg,
- * puis décommentez la balise <video>. En l'absence de vidéo, un dégradé
- * cinématographique anime l'arrière-plan.
+ * Hero plein écran avec vidéo auto-détectée.
+ * Déposez simplement votre fichier dans `public/video/hero.mp4`
+ * (et un poster optionnel `public/video/hero-poster.jpg`) : la vidéo
+ * s'active et apparaît en fondu. En son absence, un dégradé
+ * cinématographique anime l'arrière-plan — jamais d'élément cassé.
  */
 export function Hero() {
   const t = useTranslations("home.hero");
   const tc = useTranslations("common");
   const ref = useRef<HTMLElement>(null);
+
+  const [hasVideo, setHasVideo] = useState(false);
+  const [videoReady, setVideoReady] = useState(false);
+
+  // Vérifie la présence du fichier vidéo sans afficher d'élément cassé.
+  useEffect(() => {
+    let active = true;
+    fetch(HERO_VIDEO, { method: "HEAD" })
+      .then((res) => {
+        if (active && res.ok) setHasVideo(true);
+      })
+      .catch(() => {
+        /* pas de vidéo → on garde le dégradé */
+      });
+    return () => {
+      active = false;
+    };
+  }, []);
 
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -30,18 +53,25 @@ export function Hero() {
       ref={ref}
       className="relative flex h-[100svh] min-h-[640px] items-center justify-center overflow-hidden bg-black"
     >
-      {/* Couche média (vidéo prête à brancher) */}
+      {/* Couche média : dégradé (fallback toujours présent) + vidéo en fondu */}
       <motion.div style={{ y }} className="absolute inset-0">
-        {/*
-        <video
-          className="h-full w-full object-cover"
-          autoPlay muted loop playsInline
-          poster="/video/hero-poster.jpg"
-        >
-          <source src="/video/hero.mp4" type="video/mp4" />
-        </video>
-        */}
         <div className="hero-gradient h-full w-full" />
+        {hasVideo && (
+          <video
+            className="absolute inset-0 h-full w-full object-cover transition-opacity duration-1000 ease-[var(--ease-luxe)]"
+            style={{ opacity: videoReady ? 1 : 0 }}
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="auto"
+            poster={HERO_POSTER}
+            onCanPlay={() => setVideoReady(true)}
+            onError={() => setHasVideo(false)}
+          >
+            <source src={HERO_VIDEO} type="video/mp4" />
+          </video>
+        )}
       </motion.div>
 
       {/* Voile */}

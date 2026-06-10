@@ -73,11 +73,24 @@ public/
 - `public/video/hero.mp4` + `public/video/hero-poster.jpg` → vidéo plein écran de l'accueil (structure `<video>` déjà en place dans `Hero.tsx`).
 - `public/images/destination-*.jpg` → grandes images immersives des destinations.
 
-## Déploiement Vercel
+## Déploiement
 
-1. Importer le dépôt dans Vercel (framework détecté automatiquement).
-2. Renseigner les variables d'environnement.
-3. Deploy. Aucune configuration supplémentaire requise.
+### Vercel (recommandé — site complet)
+1. Importer le dépôt dans Vercel (framework Next.js détecté automatiquement).
+2. Renseigner les variables d'environnement (Resend, URL).
+3. Deploy. Toutes les fonctionnalités serveur fonctionnent (i18n auto, API Resend).
+
+### GitHub Pages (version statique)
+Le workflow `.github/workflows/deploy-pages.yml` génère et publie automatiquement
+une **version statique** à chaque push sur `main`.
+
+- URL : **https://drakurei.github.io/Konciergate/**
+- Activation unique : *Settings → Pages → Build and deployment → Source : **GitHub Actions***.
+- Différences avec Vercel : URLs de langue toujours préfixées (`/fr`, `/en`…),
+  pas de détection automatique, et le formulaire de contact passe par `mailto`
+  (pas de route serveur Resend en statique).
+- Activé via la variable `NEXT_PUBLIC_STATIC_EXPORT=true` (utilisée uniquement par
+  le workflow ; Vercel et le dev local ne sont pas affectés).
 
 ## Identité
 

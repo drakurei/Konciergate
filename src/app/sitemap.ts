@@ -2,6 +2,8 @@ import type { MetadataRoute } from "next";
 import { siteConfig, navRoutes, legalRoutes } from "@/lib/site";
 import { locales } from "@/i18n/routing";
 
+export const dynamic = "force-static";
+
 const paths = [
   ...navRoutes.map((r) => r.href),
   ...legalRoutes.map((r) => r.href),

@@ -6,7 +6,11 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { useTranslations } from "next-intl";
 import { sendContact } from "@/services/contact";
+import { siteConfig } from "@/lib/site";
 import { cn } from "@/lib/utils";
+
+/** Sur GitHub Pages (export statique), aucune route API → on passe par mailto. */
+const IS_STATIC = process.env.NEXT_PUBLIC_STATIC_EXPORT === "true";
 
 type Status = "idle" | "submitting" | "success" | "error";
 
@@ -38,6 +42,19 @@ export function ContactForm() {
 
   async function onSubmit(values: FormValues) {
     setStatus("submitting");
+
+    // Mode statique : ouvre le client mail pré-rempli.
+    if (IS_STATIC) {
+      const subject = encodeURIComponent(`Contact site — ${values.name}`);
+      const body = encodeURIComponent(
+        `Nom : ${values.name}\nE-mail : ${values.email}\n\n${values.message}`,
+      );
+      window.location.href = `mailto:${siteConfig.contact.email}?subject=${subject}&body=${body}`;
+      setStatus("success");
+      reset();
+      return;
+    }
+
     const res = await sendContact({
       name: values.name,
       email: values.email,

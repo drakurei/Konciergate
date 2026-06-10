@@ -18,5 +18,8 @@ export const localeMeta: Record<Locale, { label: string; native: string; flag: s
 export const routing = defineRouting({
   locales,
   defaultLocale,
-  localePrefix: "as-needed",
+  // Export statique (GitHub Pages) : pas de middleware → toutes les langues
+  // sont préfixées (/fr, /en…). Sur serveur (Vercel) : "as-needed" (URL propre).
+  localePrefix:
+    process.env.NEXT_PUBLIC_STATIC_EXPORT === "true" ? "always" : "as-needed",
 });

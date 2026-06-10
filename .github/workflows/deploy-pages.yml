@@ -1,0 +1,76 @@
+name: Déploiement GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+# Permissions requises pour publier sur GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Un seul déploiement à la fois
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Retire la route API (incompatible avec l'export statique)
+        run: rm -rf src/app/api
+
+      - name: Build statique
+        env:
+          NEXT_PUBLIC_STATIC_EXPORT: "true"
+          NEXT_PUBLIC_SITE_URL: "https://drakurei.github.io/Konciergate"
+        run: npm run build
+
+      - name: Ajoute .nojekyll + redirection racine vers /fr/
+        run: |
+          touch out/.nojekyll
+          cat > out/index.html <<'EOF'
+          <!doctype html>
+          <html lang="fr">
+            <head>
+              <meta charset="utf-8" />
+              <meta http-equiv="refresh" content="0; url=./fr/" />
+              <link rel="canonical" href="https://drakurei.github.io/Konciergate/fr/" />
+              <title>Konciergate</title>
+            </head>
+            <body>
+              Redirection vers <a href="./fr/">Konciergate</a>…
+            </body>
+          </html>
+          EOF
+
+      - name: Upload de l'artefact Pages
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: out
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Déploiement vers GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

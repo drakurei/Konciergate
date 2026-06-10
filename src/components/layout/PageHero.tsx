@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { Reveal } from "@/components/ui/Reveal";
-import { cn } from "@/lib/utils";
+import { asset, cn } from "@/lib/utils";
 
 type PageHeroProps = {
   eyebrow: string;
@@ -30,7 +30,7 @@ export function PageHero({
     >
       {image ? (
         <Image
-          src={image}
+          src={asset(image)}
           alt={imageAlt}
           fill
           priority

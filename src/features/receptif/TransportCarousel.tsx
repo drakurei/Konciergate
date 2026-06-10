@@ -4,7 +4,7 @@ import { useCallback, useEffect, useState } from "react";
 import Image from "next/image";
 import useEmblaCarousel from "embla-carousel-react";
 import { useTranslations } from "next-intl";
-import { cn } from "@/lib/utils";
+import { asset, cn } from "@/lib/utils";
 
 type Vehicle = { name: string; text: string };
 
@@ -51,7 +51,7 @@ export function TransportCarousel() {
               <article className="overflow-hidden rounded-[var(--radius-lg)] bg-stone">
                 <div className="relative aspect-[16/10] overflow-hidden">
                   <Image
-                    src={IMAGES[i] ?? IMAGES[0]!}
+                    src={asset(IMAGES[i] ?? IMAGES[0]!)}
                     alt={v.name}
                     fill
                     sizes="(max-width: 768px) 88vw, 52vw"

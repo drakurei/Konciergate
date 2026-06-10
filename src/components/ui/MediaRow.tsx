@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { Reveal } from "./Reveal";
-import { cn } from "@/lib/utils";
+import { asset, cn } from "@/lib/utils";
 
 type MediaRowProps = {
   eyebrow?: string;
@@ -30,7 +30,7 @@ export function MediaRow({
         )}
       >
         <Image
-          src={image}
+          src={asset(image)}
           alt={imageAlt}
           fill
           sizes="(max-width: 768px) 100vw, 50vw"

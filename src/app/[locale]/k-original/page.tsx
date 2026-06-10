@@ -8,6 +8,7 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Reveal } from "@/components/ui/Reveal";
 import { ClubsMarquee } from "@/features/koriginal/ClubsMarquee";
 import { CtaBand } from "@/components/layout/CtaBand";
+import { asset } from "@/lib/utils";
 
 type Item = { title: string; text: string };
 
@@ -86,7 +87,7 @@ export default async function KOriginalPage({
               >
                 <div className="relative aspect-[16/11]">
                   <Image
-                    src={CATALOG_IMAGES[i] ?? CATALOG_IMAGES[0]!}
+                    src={asset(CATALOG_IMAGES[i] ?? CATALOG_IMAGES[0]!)}
                     alt={item.title}
                     fill
                     sizes="(max-width: 768px) 100vw, 50vw"

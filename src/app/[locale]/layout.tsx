@@ -4,6 +4,7 @@ import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { getMessages, setRequestLocale, getTranslations } from "next-intl/server";
 import { routing, type Locale } from "@/i18n/routing";
 import { siteConfig } from "@/lib/site";
+import { asset } from "@/lib/utils";
 import { buildMetadata } from "@/lib/seo";
 import { SmoothScroll } from "@/components/providers/SmoothScroll";
 import { IntroScreen } from "@/components/providers/IntroScreen";
@@ -36,10 +37,10 @@ export async function generateMetadata({
       template: "%s",
     },
     icons: {
-      icon: [{ url: "/icon.svg", type: "image/svg+xml" }],
-      apple: [{ url: "/apple-icon" }],
+      icon: [{ url: asset("/icon.svg"), type: "image/svg+xml" }],
+      apple: [{ url: asset("/apple-icon") }],
     },
-    manifest: "/manifest.webmanifest",
+    manifest: asset("/manifest.webmanifest"),
   };
 }
 

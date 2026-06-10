@@ -4,10 +4,11 @@ import { useEffect, useRef, useState } from "react";
 import { useTranslations } from "next-intl";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Button } from "@/components/ui/Button";
+import { asset } from "@/lib/utils";
 
 /** Chemin de la vidéo de fond. Déposez le fichier ici pour l'activer. */
-const HERO_VIDEO = "/video/hero.mp4";
-const HERO_POSTER = "/video/hero-poster.jpg";
+const HERO_VIDEO = asset("/video/hero.mp4");
+const HERO_POSTER = asset("/video/hero-poster.jpg");
 
 /**
  * Hero plein écran avec vidéo auto-détectée.

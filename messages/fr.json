@@ -1,0 +1,308 @@
+{
+  "meta": {
+    "home": {
+      "title": "Konciergate — L'Europe comme vos clients la méritent",
+      "description": "Réceptif haut de gamme, événements sur mesure et expériences football exclusives à travers l'Europe. Transport, réservations, billetterie : un seul contact."
+    },
+    "receptif": {
+      "title": "Réceptif premium — Konciergate",
+      "description": "Transport Mercedes, réservations et billetterie. Le meilleur réceptif pour vos clients à travers l'Europe, sur mesure."
+    },
+    "evenements": {
+      "title": "Événements sur mesure — Konciergate",
+      "description": "Séminaires, événements d'entreprise et réceptions privées orchestrés de bout en bout. Le concept de l'événement redéfini."
+    },
+    "koriginal": {
+      "title": "K.ORIGINAL — Au cœur du football européen",
+      "description": "Plus de 15 clubs. Tours interactifs, Match Day & VIP, saut sur le terrain et expériences exclusives au plus près des plus grands stades d'Europe."
+    },
+    "destinations": {
+      "title": "Destinations — Konciergate",
+      "description": "France, Espagne, Italie, Royaume-Uni, Suisse. L'Europe orchestrée comme vos clients la méritent."
+    },
+    "apropos": {
+      "title": "À propos — Konciergate",
+      "description": "Konciergate, l'art du réceptif d'exception. La vision de Nicolas Dufau, cofondateur."
+    },
+    "contact": {
+      "title": "Contact — Konciergate",
+      "description": "Contactez nos équipes. Transport, réservations, billetterie et événements : un seul contact pour toute l'Europe."
+    },
+    "legal": {
+      "title": "Mentions légales — Konciergate",
+      "description": "Mentions légales du site Konciergate."
+    },
+    "privacy": {
+      "title": "Politique de confidentialité — Konciergate",
+      "description": "Politique de confidentialité et protection des données personnelles de Konciergate."
+    }
+  },
+  "nav": {
+    "home": "Accueil",
+    "receptif": "Réceptif",
+    "evenements": "Événements",
+    "koriginal": "K.ORIGINAL",
+    "destinations": "Destinations",
+    "apropos": "À propos",
+    "contact": "Contact"
+  },
+  "common": {
+    "discover": "Découvrir",
+    "contactUs": "Nous contacter",
+    "learnMore": "En savoir plus",
+    "viewMore": "Voir plus",
+    "submit": "Envoyer",
+    "sending": "Envoi en cours…",
+    "language": "Langue",
+    "menu": "Menu",
+    "close": "Fermer",
+    "skipToContent": "Aller au contenu",
+    "openMenu": "Ouvrir le menu",
+    "scroll": "Défiler"
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "Réceptif & événements d'exception",
+      "title": "Konciergate",
+      "subtitle": "L'Europe comme vos clients la méritent.",
+      "ctaPrimary": "Découvrir",
+      "ctaSecondary": "Nous contacter"
+    },
+    "manifesto": {
+      "title": "L'Europe comme vos clients la méritent.",
+      "body": "Notre équipe imagine et orchestre l'intégralité de leur séjour. Cet accompagnement nous permet d'offrir une expérience personnalisée et unique, fidèle à chaque exigence."
+    },
+    "services": {
+      "eyebrow": "Un seul contact",
+      "title": "Transport, réservations, billetterie, guides — réunis.",
+      "lead": "Laissez-vous guider par nos meilleures offres.",
+      "items": [
+        { "title": "Transport", "text": "Une flotte Mercedes à la hauteur de chaque trajet, du transfert au déplacement de groupe." },
+        { "title": "Réservations", "text": "Les meilleures adresses sélectionnées pour vos clients, restaurants, hôtels et lieux d'exception." },
+        { "title": "Billetterie", "text": "Émission de billets et accès aux plus grands spectacles et événements de la saison." },
+        { "title": "Conciergerie", "text": "Guides, demandes spéciales, imprévus : une réponse en moins de 24 h." }
+      ]
+    },
+    "stats": {
+      "eyebrow": "Konciergate en chiffres",
+      "title": "Une exigence mesurable.",
+      "items": [
+        { "value": "15+", "label": "clubs" },
+        { "value": "5", "label": "pays" },
+        { "value": "100%", "label": "sur mesure" },
+        { "value": "24h", "label": "de réponse" }
+      ]
+    },
+    "cta": {
+      "title": "Composons l'expérience de vos clients.",
+      "text": "Parlez-nous de votre projet : nos équipes vous répondent sous 24 heures.",
+      "button": "Nous contacter"
+    }
+  },
+  "receptif": {
+    "hero": {
+      "eyebrow": "Réceptif",
+      "title": "Le meilleur réceptif pour votre entreprise.",
+      "subtitle": "Chaque service s'adapte aux exigences de vos clients."
+    },
+    "transport": {
+      "eyebrow": "Transport",
+      "title": "Découvrez toutes nos gammes de véhicules.",
+      "lead": "Une flotte Mercedes d'exception pour chaque besoin, du transfert privé au déplacement de groupe.",
+      "vehicles": [
+        { "name": "Mercedes Classe V", "text": "Le raffinement pour vos transferts privés, jusqu'à 7 passagers dans un confort absolu." },
+        { "name": "Mercedes Sprinter", "text": "L'équilibre parfait entre espace et élégance pour les groupes intermédiaires." },
+        { "name": "Mercedes Autocar", "text": "Le grand confort pour vos délégations et événements de grande envergure." }
+      ]
+    },
+    "reservation": {
+      "eyebrow": "Réservation",
+      "title": "Nous orchestrons les meilleures adresses pour vos clients.",
+      "text": "Hôtels, restaurants et lieux d'exception : nous planifions chaque étape pour un séjour parfaitement fluide."
+    },
+    "billetterie": {
+      "eyebrow": "Billetterie",
+      "title": "Émission de billets et réservation de spectacles.",
+      "text": "Tout événement de la saison, sécurisé et coordonné par nos équipes."
+    },
+    "destinationsTeaser": {
+      "title": "Une offre complète.",
+      "text": "Découvrez différents pays avec nos services réceptifs.",
+      "cta": "Voir les destinations"
+    }
+  },
+  "evenements": {
+    "hero": {
+      "eyebrow": "Événements",
+      "title": "Le concept de l'événement redéfini.",
+      "subtitle": "Nous créons avec vous des événements pensés de A à Z."
+    },
+    "intro": {
+      "title": "Votre événement, tel que vous l'avez imaginé.",
+      "text": "De la conception à la réalisation, chacun de nos services est dédié à donner vie à un événement à votre image."
+    },
+    "categories": {
+      "title": "Trois formats, une même exigence.",
+      "items": [
+        { "title": "Séminaires", "text": "Des rencontres professionnelles orchestrées avec précision, du lieu au moindre détail." },
+        { "title": "Événements", "text": "Lancements, soirées et célébrations d'entreprise à la hauteur de votre image." },
+        { "title": "Privés", "text": "Des moments intimes et confidentiels, conçus sur mesure pour vos invités." }
+      ]
+    },
+    "advantages": {
+      "title": "Les atouts de nos services événementiels.",
+      "items": [
+        { "title": "Gestion & préparation rapides", "text": "Une organisation réactive, du brief à la livraison." },
+        { "title": "Ressources humaines", "text": "Des équipes dédiées et expérimentées sur le terrain." },
+        { "title": "Maîtrise du budget", "text": "Une transparence totale et un suivi rigoureux." },
+        { "title": "Professionnalisme", "text": "L'exigence du détail à chaque étape." }
+      ]
+    },
+    "testimonials": {
+      "title": "Ils ont vécu l'expérience Konciergate Events.",
+      "items": [
+        { "quote": "Une organisation irréprochable du début à la fin. Nos invités en parlent encore.", "author": "Lucas M.", "role": "Directeur, séminaire d'entreprise" },
+        { "quote": "Réactivité, élégance et sens du détail. Konciergate a dépassé nos attentes.", "author": "Miguel R.", "role": "Responsable événementiel" },
+        { "quote": "Un partenaire de confiance pour nos réceptions privées les plus exigeantes.", "author": "Laura D.", "role": "Cliente privée" }
+      ]
+    },
+    "cta": {
+      "title": "Nous sommes à votre disposition.",
+      "button": "Nous contacter"
+    }
+  },
+  "koriginal": {
+    "hero": {
+      "eyebrow": "K.ORIGINAL",
+      "title": "Plongez au cœur du football.",
+      "subtitle": "Les plus grands stades d'Europe, comme vous ne les avez jamais vécus."
+    },
+    "clubs": {
+      "title": "Plus de 15 clubs disponibles.",
+      "text": "Real Madrid, FC Barcelone, Atlético de Madrid, Real Sociedad, Athletic Bilbao, Girona, Valence, Majorque et bien d'autres."
+    },
+    "catalog": {
+      "eyebrow": "Produits & services",
+      "title": "Catalogue K.ORIGINAL",
+      "items": [
+        { "title": "Tour interactif", "text": "Une visite immersive des coulisses du stade, du vestiaire au tunnel des joueurs." },
+        { "title": "Match Day & VIP", "text": "Vivez le match dans les loges les plus prestigieuses, hospitalité comprise." },
+        { "title": "Saut sur le terrain", "text": "Foulez la pelouse mythique et ressentez l'émotion du grand jour." },
+        { "title": "Expériences exclusives", "text": "Rencontres, accès privilégiés et moments uniques sur demande." }
+      ]
+    },
+    "experiences": {
+      "title": "Autant de possibilités que de désirs.",
+      "list": [
+        "Billet Tour interactif",
+        "Tour avec guide officiel",
+        "Expérience immersive",
+        "Billet Match Day"
+      ],
+      "cta": "Nous contacter"
+    }
+  },
+  "destinations": {
+    "hero": {
+      "eyebrow": "Destinations",
+      "title": "L'Europe, orchestrée.",
+      "subtitle": "Cinq pays, une même exigence du détail."
+    },
+    "items": [
+      { "name": "France", "text": "De Paris à la Côte d'Azur, l'art de vivre français dans ce qu'il a de plus raffiné." },
+      { "name": "Espagne", "text": "Madrid, Barcelone, Saint-Sébastien : passion, gastronomie et grands stades." },
+      { "name": "Italie", "text": "Rome, Milan, la Toscane : patrimoine, élégance et tables d'exception." },
+      { "name": "Royaume-Uni", "text": "Londres et au-delà : héritage, prestige et événements de classe mondiale." },
+      { "name": "Suisse", "text": "Genève, Zurich, les Alpes : discrétion, précision et nature souveraine." }
+    ]
+  },
+  "apropos": {
+    "hero": {
+      "eyebrow": "À propos",
+      "title": "L'art du réceptif d'exception.",
+      "subtitle": "Une maison fondée sur une conviction : chaque séjour mérite d'être unique."
+    },
+    "story": {
+      "p1": "Konciergate est né d'une exigence simple et rare : offrir à chaque client une expérience européenne pensée dans le moindre détail, du premier transfert à la dernière réservation.",
+      "p2": "Transport, hébergement, billetterie, événements et expériences football : nous réunissons tout sous un seul contact, pour une fluidité absolue et une discrétion totale."
+    },
+    "quote": {
+      "text": "Avec Konciergate, nous voulons offrir une expérience unique à nos clients.",
+      "author": "Nicolas Dufau",
+      "role": "Cofondateur"
+    },
+    "values": {
+      "title": "Nos engagements.",
+      "items": [
+        { "title": "Sur mesure", "text": "Aucune prestation standard. Chaque détail est pensé pour vos clients." },
+        { "title": "Discrétion", "text": "Le luxe se vit en silence. Nous restons dans l'ombre de votre réussite." },
+        { "title": "Excellence", "text": "Des partenaires triés sur le volet, partout en Europe." }
+      ]
+    }
+  },
+  "contact": {
+    "hero": {
+      "eyebrow": "Contact",
+      "title": "Parlons de votre projet.",
+      "subtitle": "Pour améliorer la qualité de nos services, nos équipes sont à votre disposition."
+    },
+    "info": {
+      "phoneLabel": "Téléphone",
+      "emailLabel": "E-mail",
+      "addressLabel": "Adresse",
+      "hoursLabel": "Horaires d'ouverture",
+      "hoursWeekdays": "Lun – Ven",
+      "hoursWeekend": "Sam – Dim",
+      "socialLabel": "Suivez-nous"
+    },
+    "form": {
+      "name": "Nom",
+      "namePlaceholder": "Votre nom",
+      "email": "E-mail",
+      "emailPlaceholder": "vous@exemple.com",
+      "message": "Message",
+      "messagePlaceholder": "Décrivez votre projet…",
+      "consent": "J'accepte que mes données soient traitées afin d'être recontacté(e). Je peux révoquer ce consentement à tout moment.",
+      "required": "Champs obligatoires",
+      "submit": "Envoyer",
+      "sending": "Envoi en cours…",
+      "success": "Merci. Votre message a bien été envoyé — nous vous répondons sous 24 h.",
+      "error": "Une erreur est survenue. Merci de réessayer ou de nous écrire directement.",
+      "errors": {
+        "name": "Veuillez indiquer votre nom (2 caractères min.).",
+        "email": "Veuillez indiquer une adresse e-mail valide.",
+        "message": "Votre message doit contenir au moins 10 caractères.",
+        "consent": "Veuillez accepter le traitement de vos données."
+      }
+    }
+  },
+  "footer": {
+    "tagline": "L'Europe comme vos clients la méritent.",
+    "navTitle": "Navigation",
+    "contactTitle": "Contact",
+    "legalTitle": "Informations",
+    "rights": "Tous droits réservés.",
+    "madeIn": "Conçu à Paris."
+  },
+  "legal": {
+    "title": "Mentions légales",
+    "sections": [
+      { "heading": "Éditeur du site", "body": "Le présent site est édité par Konciergate, 79 avenue des Champs-Élysées, bureau 326, 75008 Paris, France. Contact : konciergate@gmail.com — +33 6 74 14 66 49." },
+      { "heading": "Directeur de la publication", "body": "Nicolas Dufau, Cofondateur." },
+      { "heading": "Hébergement", "body": "Le site est hébergé par Vercel Inc., 340 S Lemon Ave #4133, Walnut, CA 91789, États-Unis." },
+      { "heading": "Propriété intellectuelle", "body": "L'ensemble des contenus (textes, images, logo « K. », identité visuelle) est la propriété exclusive de Konciergate. Toute reproduction sans autorisation est interdite." },
+      { "heading": "Responsabilité", "body": "Konciergate s'efforce d'assurer l'exactitude des informations diffusées mais ne saurait être tenue responsable d'éventuelles omissions ou inexactitudes." }
+    ]
+  },
+  "privacy": {
+    "title": "Politique de confidentialité",
+    "intro": "Konciergate accorde une importance primordiale à la protection de vos données personnelles, conformément au Règlement Général sur la Protection des Données (RGPD).",
+    "sections": [
+      { "heading": "Données collectées", "body": "Via le formulaire de contact, nous collectons votre nom, votre adresse e-mail et le contenu de votre message, dans le seul but de répondre à votre demande." },
+      { "heading": "Finalité du traitement", "body": "Vos données sont utilisées exclusivement pour traiter votre demande et vous recontacter. Elles ne sont jamais cédées ni revendues à des tiers." },
+      { "heading": "Durée de conservation", "body": "Vos données sont conservées le temps nécessaire au traitement de votre demande, puis archivées ou supprimées." },
+      { "heading": "Vos droits", "body": "Vous disposez d'un droit d'accès, de rectification, d'effacement et d'opposition. Pour l'exercer, écrivez-nous à konciergate@gmail.com." },
+      { "heading": "Cookies", "body": "Ce site utilise uniquement des cookies strictement nécessaires à son fonctionnement et à la mémorisation de votre langue." }
+    ]
+  }
+}

@@ -1,0 +1,308 @@
+{
+  "meta": {
+    "home": {
+      "title": "Konciergate — 为您的客户呈现应有的欧洲",
+      "description": "遍及欧洲的高端地接服务、定制活动与专属足球体验。交通、预订、票务：一站式联系。"
+    },
+    "receptif": {
+      "title": "高端地接 — Konciergate",
+      "description": "梅赛德斯专车、预订与票务。为您的客户提供遍及欧洲的顶级定制地接服务。"
+    },
+    "evenements": {
+      "title": "定制活动 — Konciergate",
+      "description": "研讨会、企业活动与私人招待，全程精心策划。重新定义活动的概念。"
+    },
+    "koriginal": {
+      "title": "K.ORIGINAL — 走进欧洲足球的核心",
+      "description": "超过 15 家俱乐部。互动球场之旅、比赛日与 VIP、踏上草坪及在欧洲顶级球场的专属体验。"
+    },
+    "destinations": {
+      "title": "目的地 — Konciergate",
+      "description": "法国、西班牙、意大利、英国、瑞士。为您的客户精心编排应有的欧洲。"
+    },
+    "apropos": {
+      "title": "关于我们 — Konciergate",
+      "description": "Konciergate，卓越地接的艺术。联合创始人 Nicolas Dufau 的愿景。"
+    },
+    "contact": {
+      "title": "联系我们 — Konciergate",
+      "description": "联系我们的团队。交通、预订、票务与活动：覆盖全欧洲的一站式联系。"
+    },
+    "legal": {
+      "title": "法律声明 — Konciergate",
+      "description": "Konciergate 网站的法律声明。"
+    },
+    "privacy": {
+      "title": "隐私政策 — Konciergate",
+      "description": "Konciergate 的隐私政策与个人数据保护。"
+    }
+  },
+  "nav": {
+    "home": "首页",
+    "receptif": "地接服务",
+    "evenements": "活动",
+    "koriginal": "K.ORIGINAL",
+    "destinations": "目的地",
+    "apropos": "关于我们",
+    "contact": "联系我们"
+  },
+  "common": {
+    "discover": "探索",
+    "contactUs": "联系我们",
+    "learnMore": "了解更多",
+    "viewMore": "查看更多",
+    "submit": "发送",
+    "sending": "发送中…",
+    "language": "语言",
+    "menu": "菜单",
+    "close": "关闭",
+    "skipToContent": "跳到内容",
+    "openMenu": "打开菜单",
+    "scroll": "滚动"
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "卓越地接与活动",
+      "title": "Konciergate",
+      "subtitle": "为您的客户呈现应有的欧洲。",
+      "ctaPrimary": "探索",
+      "ctaSecondary": "联系我们"
+    },
+    "manifesto": {
+      "title": "为您的客户呈现应有的欧洲。",
+      "body": "我们的团队精心设计并安排他们的整个行程。这种专属服务让我们能够提供个性化、独一无二的体验，契合每一项期待。"
+    },
+    "services": {
+      "eyebrow": "一站式联系",
+      "title": "交通、预订、票务、向导 — 一应俱全。",
+      "lead": "让我们最优质的服务为您指引。",
+      "items": [
+        { "title": "交通", "text": "梅赛德斯车队胜任每一段旅程，从私人接送到团队出行。" },
+        { "title": "预订", "text": "为您的客户甄选最佳去处：餐厅、酒店与非凡场所。" },
+        { "title": "票务", "text": "出票并入场观赏本季最盛大的演出与赛事。" },
+        { "title": "礼宾", "text": "向导、特别需求、临时事务：24 小时内回复。" }
+      ]
+    },
+    "stats": {
+      "eyebrow": "数字中的 Konciergate",
+      "title": "可衡量的卓越。",
+      "items": [
+        { "value": "15+", "label": "俱乐部" },
+        { "value": "5", "label": "国家" },
+        { "value": "100%", "label": "定制" },
+        { "value": "24h", "label": "响应" }
+      ]
+    },
+    "cta": {
+      "title": "让我们共同打造您客户的体验。",
+      "text": "告诉我们您的项目——我们的团队将在 24 小时内回复。",
+      "button": "联系我们"
+    }
+  },
+  "receptif": {
+    "hero": {
+      "eyebrow": "地接服务",
+      "title": "为您的企业提供最佳地接。",
+      "subtitle": "每一项服务都契合您客户的需求。"
+    },
+    "transport": {
+      "eyebrow": "交通",
+      "title": "探索我们全系列车型。",
+      "lead": "卓越的梅赛德斯车队满足各种需求，从私人接送到团队出行。",
+      "vehicles": [
+        { "name": "梅赛德斯 V 级", "text": "为您的私人接送带来精致优雅，最多 7 名乘客，舒适无与伦比。" },
+        { "name": "梅赛德斯 Sprinter", "text": "空间与优雅的完美平衡，适合中型团队。" },
+        { "name": "梅赛德斯大巴", "text": "为您的代表团与大型活动提供极致舒适。" }
+      ]
+    },
+    "reservation": {
+      "eyebrow": "预订",
+      "title": "我们为您的客户编排最佳去处。",
+      "text": "酒店、餐厅与非凡场所：我们规划每一个环节，确保行程顺畅无忧。"
+    },
+    "billetterie": {
+      "eyebrow": "票务",
+      "title": "出票与演出预订。",
+      "text": "本季任何赛事或演出，皆由我们的团队安全协调。"
+    },
+    "destinationsTeaser": {
+      "title": "完整的服务。",
+      "text": "通过我们的地接服务探索不同的国家。",
+      "cta": "查看目的地"
+    }
+  },
+  "evenements": {
+    "hero": {
+      "eyebrow": "活动",
+      "title": "重新定义活动的概念。",
+      "subtitle": "我们与您共同打造从始至终精心构思的活动。"
+    },
+    "intro": {
+      "title": "您所设想的活动，如愿呈现。",
+      "text": "从构思到落地，我们的每一项服务都致力于将契合您形象的活动变为现实。"
+    },
+    "categories": {
+      "title": "三种形式，同一标准。",
+      "items": [
+        { "title": "研讨会", "text": "精确编排的专业聚会，从场地到每一处细节。" },
+        { "title": "活动", "text": "发布会、晚宴与企业庆典，与您的形象相称。" },
+        { "title": "私人定制", "text": "为您的宾客量身打造的私密而尊贵的时刻。" }
+      ]
+    },
+    "advantages": {
+      "title": "我们活动服务的优势。",
+      "items": [
+        { "title": "快速管理与筹备", "text": "从简报到交付，组织反应迅速。" },
+        { "title": "人力资源", "text": "现场专业、专属的团队。" },
+        { "title": "预算掌控", "text": "完全透明，严格跟进。" },
+        { "title": "专业精神", "text": "每一步都对细节精益求精。" }
+      ]
+    },
+    "testimonials": {
+      "title": "他们体验了 Konciergate Events。",
+      "items": [
+        { "quote": "从头到尾组织完美无瑕。我们的宾客至今仍津津乐道。", "author": "Lucas M.", "role": "企业研讨会负责人" },
+        { "quote": "反应迅速、优雅且注重细节。Konciergate 超出了我们的预期。", "author": "Miguel R.", "role": "活动经理" },
+        { "quote": "在我们最严苛的私人招待中，他们是值得信赖的伙伴。", "author": "Laura D.", "role": "私人客户" }
+      ]
+    },
+    "cta": {
+      "title": "我们随时为您效劳。",
+      "button": "联系我们"
+    }
+  },
+  "koriginal": {
+    "hero": {
+      "eyebrow": "K.ORIGINAL",
+      "title": "走进足球的核心。",
+      "subtitle": "欧洲顶级球场，前所未有的体验。"
+    },
+    "clubs": {
+      "title": "超过 15 家俱乐部可供选择。",
+      "text": "皇家马德里、巴塞罗那、马德里竞技、皇家社会、毕尔巴鄂竞技、赫罗纳、瓦伦西亚、马略卡等众多俱乐部。"
+    },
+    "catalog": {
+      "eyebrow": "产品与服务",
+      "title": "K.ORIGINAL 目录",
+      "items": [
+        { "title": "互动之旅", "text": "沉浸式探访球场幕后，从更衣室到球员通道。" },
+        { "title": "比赛日与 VIP", "text": "在最尊贵的包厢观赛，含贵宾接待。" },
+        { "title": "踏上草坪", "text": "踏上传奇草坪，感受重大时刻的激情。" },
+        { "title": "专属体验", "text": "见面会、特权通道与应需而定的独特时刻。" }
+      ]
+    },
+    "experiences": {
+      "title": "心之所愿，皆有可能。",
+      "list": [
+        "互动之旅门票",
+        "官方向导陪同之旅",
+        "沉浸式体验",
+        "比赛日门票"
+      ],
+      "cta": "联系我们"
+    }
+  },
+  "destinations": {
+    "hero": {
+      "eyebrow": "目的地",
+      "title": "精心编排的欧洲。",
+      "subtitle": "五个国家，同一种对细节的执着。"
+    },
+    "items": [
+      { "name": "法国", "text": "从巴黎到蔚蓝海岸，最精致的法式生活艺术。" },
+      { "name": "西班牙", "text": "马德里、巴塞罗那、圣塞瓦斯蒂安：激情、美食与伟大球场。" },
+      { "name": "意大利", "text": "罗马、米兰、托斯卡纳：传承、优雅与非凡美食。" },
+      { "name": "英国", "text": "伦敦及更远之处：传承、声望与世界级活动。" },
+      { "name": "瑞士", "text": "日内瓦、苏黎世、阿尔卑斯山：低调、精准与至高的自然。" }
+    ]
+  },
+  "apropos": {
+    "hero": {
+      "eyebrow": "关于我们",
+      "title": "卓越地接的艺术。",
+      "subtitle": "一家秉持一个信念而创立的机构：每一次旅程都值得独一无二。"
+    },
+    "story": {
+      "p1": "Konciergate 源于一个简单而稀有的标准：为每一位客户提供从第一次接送到最后一次预订都考量到极致细节的欧洲体验。",
+      "p2": "交通、住宿、票务、活动与足球体验：我们将一切汇聚于一站式联系，实现绝对的流畅与彻底的低调。"
+    },
+    "quote": {
+      "text": "通过 Konciergate，我们希望为客户提供独一无二的体验。",
+      "author": "Nicolas Dufau",
+      "role": "联合创始人"
+    },
+    "values": {
+      "title": "我们的承诺。",
+      "items": [
+        { "title": "量身定制", "text": "绝无标准化服务。每一处细节都为您的客户而设计。" },
+        { "title": "低调", "text": "奢华无声。我们隐于您成功的背后。" },
+        { "title": "卓越", "text": "精挑细选的合作伙伴，遍布全欧洲。" }
+      ]
+    }
+  },
+  "contact": {
+    "hero": {
+      "eyebrow": "联系我们",
+      "title": "聊聊您的项目。",
+      "subtitle": "为提升服务质量，我们的团队随时为您效劳。"
+    },
+    "info": {
+      "phoneLabel": "电话",
+      "emailLabel": "电子邮箱",
+      "addressLabel": "地址",
+      "hoursLabel": "营业时间",
+      "hoursWeekdays": "周一 – 周五",
+      "hoursWeekend": "周六 – 周日",
+      "socialLabel": "关注我们"
+    },
+    "form": {
+      "name": "姓名",
+      "namePlaceholder": "您的姓名",
+      "email": "电子邮箱",
+      "emailPlaceholder": "you@example.com",
+      "message": "留言",
+      "messagePlaceholder": "请描述您的项目…",
+      "consent": "我同意我的数据被处理以便回复联系。我可随时撤回此同意。",
+      "required": "必填项",
+      "submit": "发送",
+      "sending": "发送中…",
+      "success": "感谢您。您的留言已成功发送——我们将在 24 小时内回复。",
+      "error": "发生错误。请重试或直接给我们写信。",
+      "errors": {
+        "name": "请填写您的姓名（至少 2 个字符）。",
+        "email": "请填写有效的电子邮箱地址。",
+        "message": "您的留言至少需 10 个字符。",
+        "consent": "请同意处理您的数据。"
+      }
+    }
+  },
+  "footer": {
+    "tagline": "为您的客户呈现应有的欧洲。",
+    "navTitle": "导航",
+    "contactTitle": "联系",
+    "legalTitle": "信息",
+    "rights": "保留所有权利。",
+    "madeIn": "于巴黎匠心打造。"
+  },
+  "legal": {
+    "title": "法律声明",
+    "sections": [
+      { "heading": "网站发布方", "body": "本网站由 Konciergate 发布，地址：79 avenue des Champs-Élysées, 326 室, 75008 巴黎, 法国。联系方式：konciergate@gmail.com — +33 6 74 14 66 49。" },
+      { "heading": "出版总监", "body": "Nicolas Dufau，联合创始人。" },
+      { "heading": "托管", "body": "本网站由 Vercel Inc. 托管，地址：340 S Lemon Ave #4133, Walnut, CA 91789, 美国。" },
+      { "heading": "知识产权", "body": "所有内容（文字、图片、« K. » 标志、视觉识别）均为 Konciergate 独家所有。未经授权，禁止任何复制。" },
+      { "heading": "责任", "body": "Konciergate 力求确保所发布信息的准确性，但不对任何遗漏或不准确承担责任。" }
+    ]
+  },
+  "privacy": {
+    "title": "隐私政策",
+    "intro": "Konciergate 高度重视您个人数据的保护，并遵守《通用数据保护条例》（GDPR）。",
+    "sections": [
+      { "heading": "收集的数据", "body": "通过联系表单，我们收集您的姓名、电子邮箱及留言内容，仅用于回复您的请求。" },
+      { "heading": "处理目的", "body": "您的数据仅用于处理您的请求并与您联系。绝不会与第三方共享或出售。" },
+      { "heading": "保存期限", "body": "您的数据将保存至处理请求所需的期限，随后归档或删除。" },
+      { "heading": "您的权利", "body": "您拥有访问、更正、删除和反对的权利。如需行使，请写信至 konciergate@gmail.com。" },
+      { "heading": "Cookie", "body": "本网站仅使用其运行及记住您语言所严格必需的 Cookie。" }
+    ]
+  }
+}

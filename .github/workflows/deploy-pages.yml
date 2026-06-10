@@ -30,7 +30,7 @@ jobs:
           cache: npm
 
       - name: Install dependencies
-        run: npm ci
+        run: npm install --no-audit --no-fund
 
       - name: Retire la route API (incompatible avec l'export statique)
         run: rm -rf src/app/api

@@ -12,7 +12,6 @@ import { asset } from "@/lib/utils";
  */
 export function HeroVideo() {
   const t = useTranslations("home.hero");
-  const tc = useTranslations("common");
   const contentRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -62,7 +61,7 @@ export function HeroVideo() {
       {/* Contenu : uniquement les CTA, positionnés en bas */}
       <div
         ref={contentRef}
-        className="shell relative z-10 flex flex-col items-center pb-28 text-center md:pb-32"
+        className="shell relative z-10 flex flex-col items-center pb-14 text-center md:pb-16"
       >
         <div
           data-hero-item
@@ -74,14 +73,6 @@ export function HeroVideo() {
           <Button href="/contact" variant="light" size="lg">
             {t("ctaSecondary")}
           </Button>
-        </div>
-      </div>
-
-      {/* Indice de défilement */}
-      <div className="absolute bottom-8 left-1/2 z-10 -translate-x-1/2">
-        <span className="sr-only">{tc("scroll")}</span>
-        <div className="flex h-10 w-6 items-start justify-center rounded-full border border-white/40 p-1.5">
-          <span className="kg-scroll-dot h-2 w-px bg-white/70" />
         </div>
       </div>
     </section>

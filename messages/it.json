@@ -221,28 +221,28 @@
     "capacityLabel": "Capacità",
     "passengersUnit": "passeggeri",
     "featuresLabel": "Dotazioni",
-    "reserve": "Prenota via WhatsApp",
+    "reserve": "Prenota su WhatsApp",
     "items": [
       {
         "name": "Mercedes Classe V",
         "tagline": "Transfer VIP",
-        "description": "Trasporto premium fino a 7 passeggeri. Interni di alta gamma, sedili confortevoli, ideale per transfer VIP, eventi e trasferte d'affari.",
-        "passengers": "Fino a 7",
-        "features": ["Pelle e finiture premium", "Climatizzazione individuale", "Wi-Fi e porte USB", "Bottiglie d'acqua offerte"]
+        "description": "Il veicolo ideale per transfer VIP, trasferte d'affari ed eventi privati. Gli interni raffinati, le finiture di alta gamma e il comfort eccezionale garantiscono un'esperienza di trasporto premium.",
+        "passengers": "Fino a 7 passeggeri",
+        "features": ["Climatizzazione", "Sedili comfort premium", "Ampio spazio bagagli", "Vetri oscurati", "Caricatori USB", "Wi-Fi disponibile su richiesta"]
       },
       {
         "name": "Mercedes Sprinter VIP",
         "tagline": "Gruppi e delegazioni",
-        "description": "La soluzione perfetta per gruppi e delegazioni. Comfort superiore, spazio generoso e servizi premium per i lunghi tragitti.",
-        "passengers": "Fino a 16",
-        "features": ["Sedili VIP reclinabili", "Ampio spazio bagagli", "Wi-Fi a bordo", "Illuminazione d'ambiente"]
+        "description": "Pensato per gruppi e delegazioni, lo Sprinter VIP offre uno spazio generoso e un livello di comfort superiore per tragitti a lunga distanza, eventi e trasferte professionali.",
+        "passengers": "Fino a 20 passeggeri secondo la configurazione",
+        "features": ["Climatizzazione", "Poltrone comfort", "Illuminazione interna premium", "Ampio spazio bagagli", "Connettività USB"]
       },
       {
         "name": "Mercedes Autobus",
         "tagline": "Eventi e seminari",
-        "description": "Grande capacità per eventi, seminari, viaggi aziendali e trasferte sportive. Servizio professionale e comfort ottimale.",
-        "passengers": "Fino a 55",
-        "features": ["Comfort sulle lunghe distanze", "Aria condizionata", "Impianto audio e microfono", "Bagagliaio spazioso"]
+        "description": "La soluzione ideale per grandi gruppi, seminari, eventi sportivi e viaggi aziendali. Un trasporto affidabile, confortevole e perfettamente adatto ai servizi di alta gamma.",
+        "passengers": "Secondo la configurazione",
+        "features": ["Climatizzazione", "Sedili reclinabili", "Ampio spazio bagagli", "Comfort sulle lunghe distanze", "Attrezzatura professionale"]
       }
     ]
   },

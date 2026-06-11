@@ -50,7 +50,6 @@ export const navRoutes = [
   { href: "/receptif", key: "receptif" },
   { href: "/evenements", key: "evenements" },
   { href: "/k-original", key: "koriginal" },
-  { href: "/vehicules", key: "vehicules" },
   { href: "/destinations", key: "destinations" },
   { href: "/a-propos", key: "apropos" },
   { href: "/contact", key: "contact" },

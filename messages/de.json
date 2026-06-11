@@ -221,28 +221,28 @@
     "capacityLabel": "Kapazität",
     "passengersUnit": "Passagiere",
     "featuresLabel": "Ausstattung",
-    "reserve": "Über WhatsApp buchen",
+    "reserve": "Auf WhatsApp buchen",
     "items": [
       {
         "name": "Mercedes V-Klasse",
         "tagline": "VIP-Transfers",
-        "description": "Premium-Transport für bis zu 7 Passagiere. Hochwertiges Interieur, bequeme Sitze, ideal für VIP-Transfers, Events und Geschäftsreisen.",
-        "passengers": "Bis zu 7",
-        "features": ["Leder & Premium-Finish", "Individuelle Klimaanlage", "Wi-Fi & USB-Anschlüsse", "Wasser inklusive"]
+        "description": "Das ideale Fahrzeug für VIP-Transfers, Geschäftsreisen und private Events. Das edle Interieur, die hochwertigen Finishes und der außergewöhnliche Komfort garantieren ein Premium-Transporterlebnis.",
+        "passengers": "Bis zu 7 Passagiere",
+        "features": ["Klimaanlage", "Premium-Komfortsitze", "Großer Gepäckraum", "Getönte Scheiben", "USB-Ladegeräte", "Wi-Fi auf Anfrage"]
       },
       {
         "name": "Mercedes Sprinter VIP",
         "tagline": "Gruppen & Delegationen",
-        "description": "Die perfekte Lösung für Gruppen und Delegationen. Überlegener Komfort, großzügiger Raum und Premium-Leistungen für lange Strecken.",
-        "passengers": "Bis zu 16",
-        "features": ["Verstellbare VIP-Sitze", "Großzügiger Gepäckraum", "Wi-Fi an Bord", "Ambientebeleuchtung"]
+        "description": "Konzipiert für Gruppen und Delegationen, bietet der Sprinter VIP großzügigen Raum und ein höheres Komfortniveau für Langstrecken, Events und Geschäftsreisen.",
+        "passengers": "Bis zu 20 Passagiere je nach Konfiguration",
+        "features": ["Klimaanlage", "Komfortsessel", "Premium-Innenbeleuchtung", "Großer Gepäckraum", "USB-Konnektivität"]
       },
       {
         "name": "Mercedes Reisebus",
         "tagline": "Events & Seminare",
-        "description": "Hohe Kapazität für Events, Seminare, Firmenreisen und Sportreisen. Professioneller Service und optimaler Komfort.",
-        "passengers": "Bis zu 55",
-        "features": ["Langstreckenkomfort", "Klimaanlage", "Lautsprecheranlage & Mikrofon", "Geräumiger Stauraum"]
+        "description": "Die ideale Lösung für große Gruppen, Seminare, Sportevents und Firmenreisen. Zuverlässiger, komfortabler Transport, perfekt auf Premium-Leistungen abgestimmt.",
+        "passengers": "Je nach Konfiguration",
+        "features": ["Klimaanlage", "Verstellbare Sitze", "Großer Gepäckraum", "Langstreckenkomfort", "Professionelle Ausstattung"]
       }
     ]
   },

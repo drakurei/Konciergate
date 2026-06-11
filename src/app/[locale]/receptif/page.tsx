@@ -2,11 +2,26 @@ import { setRequestLocale, getTranslations } from "next-intl/server";
 import type { Metadata } from "next";
 import type { Locale } from "@/i18n/routing";
 import { buildMetadata } from "@/lib/seo";
+import { whatsappUrl } from "@/lib/site";
 import { PageHero } from "@/components/layout/PageHero";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { MediaRow } from "@/components/ui/MediaRow";
-import { TransportCarousel } from "@/features/receptif/TransportCarousel";
+import { VehicleSection } from "@/features/receptif/VehicleSection";
 import { CtaBand } from "@/components/layout/CtaBand";
+
+type Vehicle = {
+  name: string;
+  tagline: string;
+  description: string;
+  passengers: string;
+  features: string[];
+};
+
+const VEHICLE_IMAGES = [
+  "/images/mercedes-classe-v.jpg",
+  "/images/mercedes-sprinter.jpg",
+  "/images/mercedes-autocar.jpg",
+];
 
 export async function generateMetadata({
   params,
@@ -25,6 +40,8 @@ export default async function ReceptifPage({
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations("receptif");
+  const tv = await getTranslations("vehicules");
+  const fleet = tv.raw("items") as Vehicle[];
 
   return (
     <>
@@ -36,7 +53,7 @@ export default async function ReceptifPage({
         imageAlt="Mercedes Classe V"
       />
 
-      {/* Transport */}
+      {/* Transport — flotte en sections premium */}
       <section className="bg-white py-24 md:py-32">
         <div className="shell">
           <SectionHeading
@@ -44,9 +61,25 @@ export default async function ReceptifPage({
             title={t("transport.title")}
             lead={t("transport.lead")}
           />
-        </div>
-        <div className="mt-16">
-          <TransportCarousel />
+          <div className="mt-20 space-y-24 md:space-y-32">
+            {fleet.map((v, i) => (
+              <VehicleSection
+                key={v.name}
+                image={VEHICLE_IMAGES[i] ?? VEHICLE_IMAGES[0]!}
+                title={v.name}
+                tagline={v.tagline}
+                description={v.description}
+                capacityLabel={tv("capacityLabel")}
+                capacity={v.passengers}
+                featuresLabel={tv("featuresLabel")}
+                features={v.features}
+                reserveLabel={tv("reserve")}
+                reserveHref={whatsappUrl(
+                  `Bonjour Konciergate, je souhaite réserver la ${v.name}.`,
+                )}
+              />
+            ))}
+          </div>
         </div>
       </section>
 

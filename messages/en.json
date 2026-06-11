@@ -221,28 +221,28 @@
     "capacityLabel": "Capacity",
     "passengersUnit": "passengers",
     "featuresLabel": "Amenities",
-    "reserve": "Book via WhatsApp",
+    "reserve": "Book on WhatsApp",
     "items": [
       {
         "name": "Mercedes V-Class",
         "tagline": "VIP transfers",
-        "description": "Premium transport for up to 7 passengers. High-end interior, comfortable seats, ideal for VIP transfers, events and business travel.",
-        "passengers": "Up to 7",
-        "features": ["Leather & premium finishes", "Individual climate control", "Wi-Fi & USB ports", "Complimentary water"]
+        "description": "The ideal vehicle for VIP transfers, business travel and private events. Its refined interior, high-end finishes and exceptional comfort guarantee a premium transport experience.",
+        "passengers": "Up to 7 passengers",
+        "features": ["Air conditioning", "Premium comfort seats", "Large luggage space", "Tinted windows", "USB chargers", "Wi-Fi available on request"]
       },
       {
         "name": "Mercedes Sprinter VIP",
         "tagline": "Groups & delegations",
-        "description": "The perfect solution for groups and delegations. Superior comfort, generous space and premium amenities for long journeys.",
-        "passengers": "Up to 16",
-        "features": ["Reclining VIP seats", "Generous luggage space", "On-board Wi-Fi", "Ambient lighting"]
+        "description": "Designed for groups and delegations, the Sprinter VIP offers generous space and a superior level of comfort for long-distance journeys, events and professional travel.",
+        "passengers": "Up to 20 passengers depending on configuration",
+        "features": ["Air conditioning", "Comfort seats", "Premium interior lighting", "Large luggage space", "USB connectivity"]
       },
       {
         "name": "Mercedes Coach",
         "tagline": "Events & seminars",
-        "description": "High capacity for events, seminars, corporate trips and sports travel. Professional service and optimal comfort.",
-        "passengers": "Up to 55",
-        "features": ["Long-distance comfort", "Air conditioning", "PA system & microphone", "Spacious hold"]
+        "description": "The ideal solution for large groups, seminars, sports events and corporate trips. Reliable, comfortable transport perfectly suited to premium services.",
+        "passengers": "Depending on configuration",
+        "features": ["Air conditioning", "Reclining seats", "Large luggage space", "Long-distance comfort", "Professional equipment"]
       }
     ]
   },

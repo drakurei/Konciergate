@@ -17,8 +17,12 @@ export function HeroVideo() {
 
   useEffect(() => {
     const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    if (reduce) return;
     const ctx = gsap.context(() => {
+      if (reduce) {
+        // Mouvement réduit : on affiche le contenu sans animation (pas d'éléments invisibles).
+        gsap.set("[data-hero-item]", { opacity: 1, y: 0 });
+        return;
+      }
       gsap.fromTo(
         "[data-hero-item]",
         { opacity: 0, y: 40 },

@@ -27,7 +27,10 @@ export function Navbar() {
     setMenuOpen(false);
   }, [pathname]);
 
-  const solid = scrolled || menuOpen;
+  // Pages claires (sans hero sombre) : navbar solide dès le haut pour rester lisible.
+  const isLightPage =
+    pathname === "/mentions-legales" || pathname === "/politique-confidentialite";
+  const solid = scrolled || menuOpen || isLightPage;
 
   return (
     <>

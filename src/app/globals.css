@@ -58,6 +58,10 @@
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
     scroll-behavior: smooth;
+    /* Fond noir initial → aucun flash blanc au chargement/refresh (site dark-first) */
+    background-color: var(--color-black);
+    /* Réserve la place de la scrollbar → aucun saut de layout (CLS) */
+    scrollbar-gutter: stable;
   }
 
   /* Désactive le scroll natif quand Lenis est actif */

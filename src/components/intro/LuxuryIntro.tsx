@@ -29,6 +29,7 @@ export function LuxuryIntro() {
   const lineRef = useRef<HTMLSpanElement>(null);
   const tagsRef = useRef<HTMLParagraphElement>(null);
   const blackRef = useRef<HTMLDivElement>(null);
+  const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
     const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -58,6 +59,13 @@ export function LuxuryIntro() {
       gsap.set(lineRef.current, { scaleX: 0, transformOrigin: "center" });
       gsap.set(blackRef.current, { opacity: 0 });
 
+      // Zoom cinématique lent et continu sur la vidéo (push-in discret).
+      gsap.fromTo(
+        videoRef.current,
+        { scale: 1.02 },
+        { scale: 1.12, duration: 6.4, ease: "none" },
+      );
+
       const tl = gsap.timeline({ onComplete: finish });
       tl.to(logoRef.current, { opacity: 1, y: 0, duration: 1, ease: "power3.out" }, 0.8)
         .to(subtitleRef.current, { opacity: 1, y: 0, duration: 0.9, ease: "power3.out" }, 1.8)
@@ -82,6 +90,7 @@ export function LuxuryIntro() {
     >
       {/* Vidéo cinématique */}
       <video
+        ref={videoRef}
         className="absolute inset-0 h-full w-full object-cover"
         autoPlay
         muted
@@ -110,7 +119,10 @@ export function LuxuryIntro() {
         >
           Agence de Conciergerie Européenne
         </p>
-        <span ref={lineRef} className="mt-9 h-px w-16 bg-gold" />
+        <span
+          ref={lineRef}
+          className="mt-9 h-px w-16 bg-gold shadow-[0_0_12px_rgba(184,146,90,0.8)]"
+        />
         <p
           ref={tagsRef}
           className="mt-9 text-[0.7rem] uppercase tracking-[0.28em] text-gold-light md:text-xs"

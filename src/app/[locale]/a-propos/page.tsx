@@ -36,6 +36,8 @@ export default async function AProposPage({
         eyebrow={t("hero.eyebrow")}
         title={t("hero.title")}
         subtitle={t("hero.subtitle")}
+        image="/images/apropos-hero.jpg"
+        imageAlt={t("hero.title")}
       />
 
       {/* Histoire */}

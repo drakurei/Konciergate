@@ -38,7 +38,7 @@ export default async function EvenementsPage({
         eyebrow={t("hero.eyebrow")}
         title={t("hero.title")}
         subtitle={t("hero.subtitle")}
-        image="/images/match-day-vip.jpg"
+        image="/images/event-hero.jpg"
         imageAlt={t("hero.title")}
       />
 

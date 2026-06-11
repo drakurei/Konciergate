@@ -13,10 +13,10 @@ import { asset } from "@/lib/utils";
 type Item = { title: string; text: string };
 
 const CATALOG_IMAGES = [
-  "/images/tour-interactif.jpg",
-  "/images/match-day-vip.jpg",
-  "/images/saut-terrain.jpg",
-  "/images/experiences-exclusives.jpg",
+  "/images/ko-tour.jpg",
+  "/images/ko-vip.jpg",
+  "/images/ko-tunnel.jpg",
+  "/images/ko-match.jpg",
 ];
 
 export async function generateMetadata({
@@ -47,7 +47,7 @@ export default async function KOriginalPage({
         eyebrow={t("hero.eyebrow")}
         title={t("hero.title")}
         subtitle={t("hero.subtitle")}
-        image="/images/saut-terrain.jpg"
+        image="/images/ko-hero.jpg"
         imageAlt={t("hero.title")}
       />
 

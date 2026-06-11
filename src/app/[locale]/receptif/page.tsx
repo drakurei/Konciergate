@@ -57,7 +57,7 @@ export default async function ReceptifPage({
             eyebrow={t("reservation.eyebrow")}
             title={t("reservation.title")}
             text={t("reservation.text")}
-            image="/images/reservation.jpg"
+            image="/images/receptif-reservation.jpg"
             imageAlt={t("reservation.title")}
           />
         </div>
@@ -71,7 +71,7 @@ export default async function ReceptifPage({
             eyebrow={t("billetterie.eyebrow")}
             title={t("billetterie.title")}
             text={t("billetterie.text")}
-            image="/images/experiences-exclusives.jpg"
+            image="/images/receptif-concierge.jpg"
             imageAlt={t("billetterie.title")}
           />
         </div>

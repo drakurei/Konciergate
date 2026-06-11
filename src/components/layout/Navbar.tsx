@@ -28,8 +28,10 @@ export function Navbar() {
   }, [pathname]);
 
   // Pages claires (sans hero sombre) : navbar solide dès le haut pour rester lisible.
+  // (insensible au slash final de l'export statique)
+  const cleanPath = pathname.replace(/\/$/, "");
   const isLightPage =
-    pathname === "/mentions-legales" || pathname === "/politique-confidentialite";
+    cleanPath === "/mentions-legales" || cleanPath === "/politique-confidentialite";
   const solid = scrolled || menuOpen || isLightPage;
 
   return (

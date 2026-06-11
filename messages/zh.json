@@ -16,6 +16,10 @@
       "title": "K.ORIGINAL — 走进欧洲足球的核心",
       "description": "超过 15 家俱乐部。互动球场之旅、比赛日与 VIP、踏上草坪及在欧洲顶级球场的专属体验。"
     },
+    "vehicules": {
+      "title": "车辆 — Konciergate 车队",
+      "description": "梅赛德斯 V 级、Sprinter VIP 与大巴。卓越车队，为您在欧洲的接送、活动与团队出行服务。"
+    },
     "destinations": {
       "title": "目的地 — Konciergate",
       "description": "法国、西班牙、意大利、英国、瑞士。为您的客户精心编排应有的欧洲。"
@@ -42,6 +46,7 @@
     "receptif": "地接服务",
     "evenements": "活动",
     "koriginal": "K.ORIGINAL",
+    "vehicules": "车辆",
     "destinations": "目的地",
     "apropos": "关于我们",
     "contact": "联系我们"
@@ -58,7 +63,11 @@
     "close": "关闭",
     "skipToContent": "跳到内容",
     "openMenu": "打开菜单",
-    "scroll": "滚动"
+    "scroll": "滚动",
+    "reserve": "预订",
+    "reserveWhatsapp": "通过 WhatsApp 预订",
+    "requestQuote": "索取报价",
+    "whatsappCta": "通过 WhatsApp 联系我们"
   },
   "home": {
     "hero": {
@@ -186,10 +195,10 @@
       "eyebrow": "产品与服务",
       "title": "K.ORIGINAL 目录",
       "items": [
-        { "title": "互动之旅", "text": "沉浸式探访球场幕后，从更衣室到球员通道。" },
-        { "title": "比赛日与 VIP", "text": "在最尊贵的包厢观赛，含贵宾接待。" },
-        { "title": "踏上草坪", "text": "踏上传奇草坪，感受重大时刻的激情。" },
-        { "title": "专属体验", "text": "见面会、特权通道与应需而定的独特时刻。" }
+        { "title": "互动之旅", "text": "沉浸式探访球场幕后。参观更衣室、球员专属区域、媒体区，并走过通向草坪的传奇球员通道。" },
+        { "title": "比赛日与 VIP", "text": "在包厢与 VIP 贵宾室以最佳条件观赏比赛。尊享高端接待、餐饮与专属体验。" },
+        { "title": "踏上草坪", "text": "在赛前或赛后踏上草坪，在球场中心体验独一无二的时刻。仅限少数尊贵宾客。" },
+        { "title": "专属体验", "text": "私人会面、特别通道、个性化参观及依俱乐部与档期定制的尊享服务。" }
       ]
     },
     "experiences": {
@@ -202,6 +211,40 @@
       ],
       "cta": "联系我们"
     }
+  },
+  "vehicules": {
+    "hero": {
+      "eyebrow": "车辆",
+      "title": "Konciergate 车队。",
+      "subtitle": "卓越的梅赛德斯车队，胜任每一段旅程与每一项需求。"
+    },
+    "capacityLabel": "载客量",
+    "passengersUnit": "名乘客",
+    "featuresLabel": "配置",
+    "reserve": "通过 WhatsApp 预订",
+    "items": [
+      {
+        "name": "梅赛德斯 V 级",
+        "tagline": "VIP 接送",
+        "description": "高端交通，最多 7 名乘客。高级内饰、舒适座椅，是 VIP 接送、活动与商务出行的理想之选。",
+        "passengers": "最多 7 名",
+        "features": ["真皮与高级饰面", "独立空调", "Wi-Fi 与 USB 接口", "免费瓶装水"]
+      },
+      {
+        "name": "梅赛德斯 Sprinter VIP",
+        "tagline": "团队与代表团",
+        "description": "团队与代表团的完美之选。卓越舒适、宽敞空间，为长途旅程提供高端配置。",
+        "passengers": "最多 16 名",
+        "features": ["可调节 VIP 座椅", "宽敞行李空间", "车载 Wi-Fi", "氛围灯光"]
+      },
+      {
+        "name": "梅赛德斯大巴",
+        "tagline": "活动与研讨会",
+        "description": "大载客量，适合活动、研讨会、企业出行与体育赛事。专业服务，舒适无忧。",
+        "passengers": "最多 55 名",
+        "features": ["长途舒适", "空调", "广播与麦克风", "宽敞行李舱"]
+      }
+    ]
   },
   "destinations": {
     "hero": {
@@ -248,6 +291,7 @@
       "subtitle": "为提升服务质量，我们的团队随时为您效劳。"
     },
     "info": {
+      "whatsappLabel": "WhatsApp",
       "phoneLabel": "电话",
       "emailLabel": "电子邮箱",
       "addressLabel": "地址",

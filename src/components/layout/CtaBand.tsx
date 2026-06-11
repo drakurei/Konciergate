@@ -1,5 +1,6 @@
 import { Reveal } from "@/components/ui/Reveal";
 import { Button } from "@/components/ui/Button";
+import { whatsappUrl } from "@/lib/site";
 
 type CtaBandProps = {
   title: string;
@@ -8,7 +9,12 @@ type CtaBandProps = {
   href?: string;
 };
 
-export function CtaBand({ title, text, buttonLabel, href = "/contact" }: CtaBandProps) {
+export function CtaBand({
+  title,
+  text,
+  buttonLabel,
+  href = whatsappUrl("Bonjour Konciergate, je souhaite obtenir des informations."),
+}: CtaBandProps) {
   return (
     <section className="bg-black py-24 text-white md:py-32">
       <div className="shell flex flex-col items-center text-center">

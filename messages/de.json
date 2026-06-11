@@ -16,6 +16,10 @@
       "title": "K.ORIGINAL — Im Herzen des europäischen Fußballs",
       "description": "Mehr als 15 Vereine. Interaktive Touren, Match Day & VIP, Rasenmomente und exklusive Erlebnisse in Europas größten Stadien."
     },
+    "vehicules": {
+      "title": "Fahrzeuge — Die Konciergate-Flotte",
+      "description": "Mercedes V-Klasse, Sprinter VIP und Reisebus. Eine außergewöhnliche Flotte für Ihre Transfers, Events und Gruppenreisen in ganz Europa."
+    },
     "destinations": {
       "title": "Reiseziele — Konciergate",
       "description": "Frankreich, Spanien, Italien, Vereinigtes Königreich, Schweiz. Europa orchestriert, wie es Ihre Kunden verdienen."
@@ -42,6 +46,7 @@
     "receptif": "Incoming",
     "evenements": "Events",
     "koriginal": "K.ORIGINAL",
+    "vehicules": "Fahrzeuge",
     "destinations": "Reiseziele",
     "apropos": "Über uns",
     "contact": "Kontakt"
@@ -58,7 +63,11 @@
     "close": "Schließen",
     "skipToContent": "Zum Inhalt springen",
     "openMenu": "Menü öffnen",
-    "scroll": "Scrollen"
+    "scroll": "Scrollen",
+    "reserve": "Buchen",
+    "reserveWhatsapp": "Über WhatsApp buchen",
+    "requestQuote": "Angebot anfordern",
+    "whatsappCta": "Schreiben Sie uns auf WhatsApp"
   },
   "home": {
     "hero": {
@@ -186,10 +195,10 @@
       "eyebrow": "Produkte & Services",
       "title": "K.ORIGINAL Katalog",
       "items": [
-        { "title": "Interaktive Tour", "text": "Ein immersiver Besuch hinter den Kulissen des Stadions, von der Kabine bis zum Spielertunnel." },
-        { "title": "Match Day & VIP", "text": "Erleben Sie das Spiel in den prestigeträchtigsten Logen, Hospitality inklusive." },
-        { "title": "Rasenmoment", "text": "Betreten Sie den legendären Rasen und spüren Sie die Emotion des großen Tages." },
-        { "title": "Exklusive Erlebnisse", "text": "Meet-and-Greets, privilegierter Zugang und einzigartige Momente auf Anfrage." }
+        { "title": "Interaktive Tour", "text": "Ein exklusives Eintauchen hinter die Kulissen des Stadions. Entdecken Sie die Kabinen, die Spielerbereiche, die Medienzonen und gehen Sie durch den legendären Tunnel zum Rasen." },
+        { "title": "Match Day & VIP", "text": "Erleben Sie das Spiel unter besten Bedingungen in den Logen und VIP-Lounges. Premium-Hospitality, Gastronomie und ein privilegiertes Erlebnis garantiert." },
+        { "title": "Rasenmoment", "text": "Betreten Sie vor oder nach dem Spiel den Rasen und erleben Sie einen einzigartigen Moment im Herzen des Stadions. Ein Erlebnis für wenige Privilegierte." },
+        { "title": "Exklusive Erlebnisse", "text": "Private Begegnungen, besonderer Zugang, personalisierte Führungen und maßgeschneiderte Leistungen je nach Verein und Verfügbarkeit." }
       ]
     },
     "experiences": {
@@ -202,6 +211,40 @@
       ],
       "cta": "Kontakt"
     }
+  },
+  "vehicules": {
+    "hero": {
+      "eyebrow": "Fahrzeuge",
+      "title": "Die Konciergate-Flotte.",
+      "subtitle": "Eine außergewöhnliche Mercedes-Flotte für jede Fahrt und jeden Anspruch."
+    },
+    "capacityLabel": "Kapazität",
+    "passengersUnit": "Passagiere",
+    "featuresLabel": "Ausstattung",
+    "reserve": "Über WhatsApp buchen",
+    "items": [
+      {
+        "name": "Mercedes V-Klasse",
+        "tagline": "VIP-Transfers",
+        "description": "Premium-Transport für bis zu 7 Passagiere. Hochwertiges Interieur, bequeme Sitze, ideal für VIP-Transfers, Events und Geschäftsreisen.",
+        "passengers": "Bis zu 7",
+        "features": ["Leder & Premium-Finish", "Individuelle Klimaanlage", "Wi-Fi & USB-Anschlüsse", "Wasser inklusive"]
+      },
+      {
+        "name": "Mercedes Sprinter VIP",
+        "tagline": "Gruppen & Delegationen",
+        "description": "Die perfekte Lösung für Gruppen und Delegationen. Überlegener Komfort, großzügiger Raum und Premium-Leistungen für lange Strecken.",
+        "passengers": "Bis zu 16",
+        "features": ["Verstellbare VIP-Sitze", "Großzügiger Gepäckraum", "Wi-Fi an Bord", "Ambientebeleuchtung"]
+      },
+      {
+        "name": "Mercedes Reisebus",
+        "tagline": "Events & Seminare",
+        "description": "Hohe Kapazität für Events, Seminare, Firmenreisen und Sportreisen. Professioneller Service und optimaler Komfort.",
+        "passengers": "Bis zu 55",
+        "features": ["Langstreckenkomfort", "Klimaanlage", "Lautsprecheranlage & Mikrofon", "Geräumiger Stauraum"]
+      }
+    ]
   },
   "destinations": {
     "hero": {
@@ -248,6 +291,7 @@
       "subtitle": "Um die Qualität unserer Services zu verbessern, stehen Ihnen unsere Teams zur Verfügung."
     },
     "info": {
+      "whatsappLabel": "WhatsApp",
       "phoneLabel": "Telefon",
       "emailLabel": "E-Mail",
       "addressLabel": "Adresse",

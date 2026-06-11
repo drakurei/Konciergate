@@ -4,6 +4,7 @@ import { useEffect, useRef } from "react";
 import { useTranslations } from "next-intl";
 import gsap from "gsap";
 import { Button } from "@/components/ui/Button";
+import { whatsappUrl } from "@/lib/site";
 import { asset } from "@/lib/utils";
 
 /**
@@ -70,7 +71,11 @@ export function HeroVideo() {
           <Button href="/receptif" variant="light" size="lg">
             {t("ctaPrimary")}
           </Button>
-          <Button href="/contact" variant="light" size="lg">
+          <Button
+            href={whatsappUrl("Bonjour Konciergate, je souhaite vous contacter.")}
+            variant="light"
+            size="lg"
+          >
             {t("ctaSecondary")}
           </Button>
         </div>

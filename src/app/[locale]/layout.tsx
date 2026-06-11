@@ -10,6 +10,7 @@ import { SmoothScroll } from "@/components/providers/SmoothScroll";
 import { LuxuryIntro } from "@/components/intro/LuxuryIntro";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
+import { WhatsAppFloat } from "@/components/layout/WhatsAppFloat";
 import "../globals.css";
 
 export function generateStaticParams() {
@@ -103,6 +104,7 @@ export default async function LocaleLayout({
             <main id="main">{children}</main>
             <Footer />
           </SmoothScroll>
+          <WhatsAppFloat />
         </NextIntlClientProvider>
       </body>
     </html>

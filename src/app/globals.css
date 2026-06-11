@@ -221,6 +221,28 @@
     }
   }
 
+  /* Halo discret du bouton WhatsApp flottant */
+  .kg-wa-ping {
+    box-shadow: 0 0 0 0 rgba(184, 146, 90, 0.5);
+    animation: kgWaPing 2.6s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+  }
+  @keyframes kgWaPing {
+    0% {
+      box-shadow: 0 0 0 0 rgba(184, 146, 90, 0.45);
+    }
+    70% {
+      box-shadow: 0 0 0 14px rgba(184, 146, 90, 0);
+    }
+    100% {
+      box-shadow: 0 0 0 0 rgba(184, 146, 90, 0);
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .kg-wa-ping {
+      animation: none;
+    }
+  }
+
   /* Bandeau défilant K.ORIGINAL */
   .kg-marquee {
     animation: kgMarquee 38s linear infinite;

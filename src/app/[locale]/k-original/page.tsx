@@ -1,14 +1,14 @@
 import { setRequestLocale, getTranslations } from "next-intl/server";
 import type { Metadata } from "next";
-import Image from "next/image";
 import type { Locale } from "@/i18n/routing";
 import { buildMetadata } from "@/lib/seo";
 import { PageHero } from "@/components/layout/PageHero";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Reveal } from "@/components/ui/Reveal";
 import { ClubsMarquee } from "@/features/koriginal/ClubsMarquee";
+import { KoExperience } from "@/features/koriginal/KoExperience";
 import { CtaBand } from "@/components/layout/CtaBand";
-import { asset } from "@/lib/utils";
+import { whatsappUrl } from "@/lib/site";
 
 type Item = { title: string; text: string };
 
@@ -36,6 +36,7 @@ export default async function KOriginalPage({
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations("koriginal");
+  const tc = await getTranslations("common");
 
   const catalog = t.raw("catalog.items") as Item[];
   const experiences = t.raw("experiences.list") as string[];
@@ -78,32 +79,24 @@ export default async function KOriginalPage({
             title={t("catalog.title")}
             align="center"
           />
-          <div className="mt-16 grid gap-6 md:grid-cols-2">
+          <div className="mt-20 space-y-24 md:space-y-32">
             {catalog.map((item, i) => (
-              <Reveal
+              <KoExperience
                 key={item.title}
-                delay={(i % 2) * 0.1}
-                className="group relative overflow-hidden rounded-[var(--radius-lg)]"
-              >
-                <div className="relative aspect-[16/11]">
-                  <Image
-                    src={asset(CATALOG_IMAGES[i] ?? CATALOG_IMAGES[0]!)}
-                    alt={item.title}
-                    fill
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                    className="object-cover transition-transform duration-[1.4s] ease-[var(--ease-luxe)] group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-                </div>
-                <div className="absolute inset-x-0 bottom-0 p-8 md:p-10">
-                  <h3 className="text-2xl font-medium tracking-tight text-white">
-                    {item.title}
-                  </h3>
-                  <p className="mt-2 max-w-md text-sm leading-relaxed text-white/75">
-                    {item.text}
-                  </p>
-                </div>
-              </Reveal>
+                index={i}
+                image={CATALOG_IMAGES[i] ?? CATALOG_IMAGES[0]!}
+                title={item.title}
+                text={item.text}
+                reverse={i % 2 === 1}
+                reserveLabel={tc("reserve")}
+                quoteLabel={tc("requestQuote")}
+                reserveHref={whatsappUrl(
+                  `Bonjour Konciergate, je souhaite réserver l'expérience « ${item.title} » (K.ORIGINAL).`,
+                )}
+                quoteHref={whatsappUrl(
+                  `Bonjour Konciergate, je souhaite un devis pour l'expérience « ${item.title} » (K.ORIGINAL).`,
+                )}
+              />
             ))}
           </div>
         </div>

@@ -16,6 +16,10 @@
       "title": "K.ORIGINAL — At the heart of European football",
       "description": "More than 15 clubs. Interactive tours, Match Day & VIP, pitch-side moments and exclusive experiences at Europe's greatest stadiums."
     },
+    "vehicules": {
+      "title": "Vehicles — The Konciergate fleet",
+      "description": "Mercedes V-Class, Sprinter VIP and Coach. An exceptional fleet for your transfers, events and group travel across Europe."
+    },
     "destinations": {
       "title": "Destinations — Konciergate",
       "description": "France, Spain, Italy, United Kingdom, Switzerland. Europe orchestrated exactly as your clients deserve it."
@@ -42,6 +46,7 @@
     "receptif": "Inbound",
     "evenements": "Events",
     "koriginal": "K.ORIGINAL",
+    "vehicules": "Vehicles",
     "destinations": "Destinations",
     "apropos": "About",
     "contact": "Contact"
@@ -58,7 +63,11 @@
     "close": "Close",
     "skipToContent": "Skip to content",
     "openMenu": "Open menu",
-    "scroll": "Scroll"
+    "scroll": "Scroll",
+    "reserve": "Book",
+    "reserveWhatsapp": "Book via WhatsApp",
+    "requestQuote": "Request a quote",
+    "whatsappCta": "Message us on WhatsApp"
   },
   "home": {
     "hero": {
@@ -186,10 +195,10 @@
       "eyebrow": "Products & services",
       "title": "K.ORIGINAL Catalogue",
       "items": [
-        { "title": "Interactive tour", "text": "An immersive visit behind the scenes of the stadium, from the locker room to the players' tunnel." },
-        { "title": "Match Day & VIP", "text": "Experience the match in the most prestigious boxes, hospitality included." },
-        { "title": "Pitch-side moment", "text": "Step onto the legendary turf and feel the emotion of the big day." },
-        { "title": "Exclusive experiences", "text": "Meet-and-greets, privileged access and unique moments on request." }
+        { "title": "Interactive tour", "text": "An exclusive immersion behind the scenes of the stadium. Discover the locker rooms, the players' areas, the media zones and walk the legendary tunnel leading to the pitch." },
+        { "title": "Match Day & VIP", "text": "Enjoy the match in the finest conditions with the boxes and VIP lounges. Premium hospitality, fine dining and a privileged experience guaranteed." },
+        { "title": "Pitch-side moment", "text": "Step onto the pitch before or after the match and live a unique moment at the heart of the stadium. An experience reserved for a privileged few." },
+        { "title": "Exclusive experiences", "text": "Private meet-and-greets, special access, personalised tours and bespoke services depending on the clubs and availability." }
       ]
     },
     "experiences": {
@@ -202,6 +211,40 @@
       ],
       "cta": "Contact us"
     }
+  },
+  "vehicules": {
+    "hero": {
+      "eyebrow": "Vehicles",
+      "title": "The Konciergate fleet.",
+      "subtitle": "An exceptional Mercedes fleet, for every journey and every expectation."
+    },
+    "capacityLabel": "Capacity",
+    "passengersUnit": "passengers",
+    "featuresLabel": "Amenities",
+    "reserve": "Book via WhatsApp",
+    "items": [
+      {
+        "name": "Mercedes V-Class",
+        "tagline": "VIP transfers",
+        "description": "Premium transport for up to 7 passengers. High-end interior, comfortable seats, ideal for VIP transfers, events and business travel.",
+        "passengers": "Up to 7",
+        "features": ["Leather & premium finishes", "Individual climate control", "Wi-Fi & USB ports", "Complimentary water"]
+      },
+      {
+        "name": "Mercedes Sprinter VIP",
+        "tagline": "Groups & delegations",
+        "description": "The perfect solution for groups and delegations. Superior comfort, generous space and premium amenities for long journeys.",
+        "passengers": "Up to 16",
+        "features": ["Reclining VIP seats", "Generous luggage space", "On-board Wi-Fi", "Ambient lighting"]
+      },
+      {
+        "name": "Mercedes Coach",
+        "tagline": "Events & seminars",
+        "description": "High capacity for events, seminars, corporate trips and sports travel. Professional service and optimal comfort.",
+        "passengers": "Up to 55",
+        "features": ["Long-distance comfort", "Air conditioning", "PA system & microphone", "Spacious hold"]
+      }
+    ]
   },
   "destinations": {
     "hero": {
@@ -248,6 +291,7 @@
       "subtitle": "To improve the quality of our services, our teams are at your disposal."
     },
     "info": {
+      "whatsappLabel": "WhatsApp",
       "phoneLabel": "Phone",
       "emailLabel": "E-mail",
       "addressLabel": "Address",

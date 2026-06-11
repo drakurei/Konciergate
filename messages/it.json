@@ -16,6 +16,10 @@
       "title": "K.ORIGINAL — Nel cuore del calcio europeo",
       "description": "Oltre 15 club. Tour interattivi, Match Day e VIP, momenti a bordo campo ed esperienze esclusive nei più grandi stadi d'Europa."
     },
+    "vehicules": {
+      "title": "Veicoli — La flotta Konciergate",
+      "description": "Mercedes Classe V, Sprinter VIP e Autobus. Una flotta d'eccezione per i vostri transfer, eventi e spostamenti di gruppo in tutta Europa."
+    },
     "destinations": {
       "title": "Destinazioni — Konciergate",
       "description": "Francia, Spagna, Italia, Regno Unito, Svizzera. L'Europa orchestrata come i vostri clienti la meritano."
@@ -42,6 +46,7 @@
     "receptif": "Incoming",
     "evenements": "Eventi",
     "koriginal": "K.ORIGINAL",
+    "vehicules": "Veicoli",
     "destinations": "Destinazioni",
     "apropos": "Chi siamo",
     "contact": "Contatti"
@@ -58,7 +63,11 @@
     "close": "Chiudi",
     "skipToContent": "Vai al contenuto",
     "openMenu": "Apri il menu",
-    "scroll": "Scorri"
+    "scroll": "Scorri",
+    "reserve": "Prenota",
+    "reserveWhatsapp": "Prenota via WhatsApp",
+    "requestQuote": "Richiedi un preventivo",
+    "whatsappCta": "Scrivici su WhatsApp"
   },
   "home": {
     "hero": {
@@ -186,10 +195,10 @@
       "eyebrow": "Prodotti e servizi",
       "title": "Catalogo K.ORIGINAL",
       "items": [
-        { "title": "Tour interattivo", "text": "Una visita immersiva dietro le quinte dello stadio, dallo spogliatoio al tunnel dei giocatori." },
-        { "title": "Match Day e VIP", "text": "Vivete la partita nei palchi più prestigiosi, hospitality inclusa." },
-        { "title": "Momento a bordo campo", "text": "Calcate il prato leggendario e vivete l'emozione del grande giorno." },
-        { "title": "Esperienze esclusive", "text": "Incontri, accessi privilegiati e momenti unici su richiesta." }
+        { "title": "Tour interattivo", "text": "Un'immersione esclusiva dietro le quinte dello stadio. Scoprite gli spogliatoi, gli spazi riservati ai giocatori, le zone media e percorrete il mitico tunnel che conduce al campo." },
+        { "title": "Match Day e VIP", "text": "Vivete la partita nelle migliori condizioni grazie ai palchi e ai salotti VIP. Hospitality premium, ristorazione ed esperienza privilegiata garantite." },
+        { "title": "Momento a bordo campo", "text": "Accedete al campo prima o dopo la partita e vivete un momento unico nel cuore dello stadio. Un'esperienza riservata a pochi privilegiati." },
+        { "title": "Esperienze esclusive", "text": "Incontri privati, accessi speciali, visite personalizzate e servizi su misura in base ai club e alla disponibilità." }
       ]
     },
     "experiences": {
@@ -202,6 +211,40 @@
       ],
       "cta": "Contattaci"
     }
+  },
+  "vehicules": {
+    "hero": {
+      "eyebrow": "Veicoli",
+      "title": "La flotta Konciergate.",
+      "subtitle": "Una flotta Mercedes d'eccezione, per ogni tragitto e ogni esigenza."
+    },
+    "capacityLabel": "Capacità",
+    "passengersUnit": "passeggeri",
+    "featuresLabel": "Dotazioni",
+    "reserve": "Prenota via WhatsApp",
+    "items": [
+      {
+        "name": "Mercedes Classe V",
+        "tagline": "Transfer VIP",
+        "description": "Trasporto premium fino a 7 passeggeri. Interni di alta gamma, sedili confortevoli, ideale per transfer VIP, eventi e trasferte d'affari.",
+        "passengers": "Fino a 7",
+        "features": ["Pelle e finiture premium", "Climatizzazione individuale", "Wi-Fi e porte USB", "Bottiglie d'acqua offerte"]
+      },
+      {
+        "name": "Mercedes Sprinter VIP",
+        "tagline": "Gruppi e delegazioni",
+        "description": "La soluzione perfetta per gruppi e delegazioni. Comfort superiore, spazio generoso e servizi premium per i lunghi tragitti.",
+        "passengers": "Fino a 16",
+        "features": ["Sedili VIP reclinabili", "Ampio spazio bagagli", "Wi-Fi a bordo", "Illuminazione d'ambiente"]
+      },
+      {
+        "name": "Mercedes Autobus",
+        "tagline": "Eventi e seminari",
+        "description": "Grande capacità per eventi, seminari, viaggi aziendali e trasferte sportive. Servizio professionale e comfort ottimale.",
+        "passengers": "Fino a 55",
+        "features": ["Comfort sulle lunghe distanze", "Aria condizionata", "Impianto audio e microfono", "Bagagliaio spazioso"]
+      }
+    ]
   },
   "destinations": {
     "hero": {
@@ -248,6 +291,7 @@
       "subtitle": "Per migliorare la qualità dei nostri servizi, i nostri team sono a vostra disposizione."
     },
     "info": {
+      "whatsappLabel": "WhatsApp",
       "phoneLabel": "Telefono",
       "emailLabel": "E-mail",
       "addressLabel": "Indirizzo",

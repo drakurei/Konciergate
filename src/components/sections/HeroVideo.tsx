@@ -36,7 +36,7 @@ export function HeroVideo() {
   }, []);
 
   return (
-    <section className="relative flex h-[100svh] min-h-[640px] items-center justify-center overflow-hidden bg-black">
+    <section className="relative flex h-[100svh] min-h-[640px] items-end justify-center overflow-hidden bg-black">
       {/* Fond vidéo */}
       <video
         className="absolute inset-0 h-full w-full object-cover"
@@ -59,32 +59,14 @@ export function HeroVideo() {
         }}
       />
 
-      {/* Contenu */}
+      {/* Contenu : uniquement les CTA, positionnés en bas */}
       <div
         ref={contentRef}
-        className="shell relative z-10 flex flex-col items-center text-center"
+        className="shell relative z-10 flex flex-col items-center pb-28 text-center md:pb-32"
       >
-        <p
-          data-hero-item
-          className="text-eyebrow mb-6 text-gold-light opacity-0"
-        >
-          {t("vipEyebrow")}
-        </p>
-        <h1
-          data-hero-item
-          className="text-display font-semibold text-white opacity-0"
-        >
-          {t("title")}
-        </h1>
-        <p
-          data-hero-item
-          className="mt-6 max-w-xl text-lg font-light text-white/85 opacity-0 md:text-2xl"
-        >
-          {t("subtitle")}
-        </p>
         <div
           data-hero-item
-          className="mt-10 flex flex-col items-center gap-4 opacity-0 sm:flex-row"
+          className="flex flex-col items-center gap-4 opacity-0 sm:flex-row"
         >
           <Button href="/receptif" variant="light" size="lg">
             {t("ctaPrimary")}

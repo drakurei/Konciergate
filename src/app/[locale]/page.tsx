@@ -2,7 +2,7 @@ import { setRequestLocale, getTranslations } from "next-intl/server";
 import type { Metadata } from "next";
 import type { Locale } from "@/i18n/routing";
 import { buildMetadata } from "@/lib/seo";
-import { Hero } from "@/features/home/Hero";
+import { HeroVideo } from "@/components/sections/HeroVideo";
 import { Manifesto } from "@/features/home/Manifesto";
 import { Services } from "@/features/home/Services";
 import { Stats } from "@/features/home/Stats";
@@ -28,7 +28,7 @@ export default async function HomePage({
 
   return (
     <>
-      <Hero />
+      <HeroVideo />
       <Manifesto />
       <Services />
       <Stats />

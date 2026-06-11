@@ -200,6 +200,27 @@
     }
   }
 
+  /* Point animé de l'indice de défilement (Hero) */
+  .kg-scroll-dot {
+    animation: kgScrollDot 1.8s ease-in-out infinite;
+  }
+  @keyframes kgScrollDot {
+    0%,
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    50% {
+      transform: translateY(8px);
+      opacity: 0.4;
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .kg-scroll-dot {
+      animation: none;
+    }
+  }
+
   /* Bandeau défilant K.ORIGINAL */
   .kg-marquee {
     animation: kgMarquee 38s linear infinite;

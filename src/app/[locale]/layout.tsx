@@ -7,7 +7,7 @@ import { siteConfig } from "@/lib/site";
 import { asset } from "@/lib/utils";
 import { buildMetadata } from "@/lib/seo";
 import { SmoothScroll } from "@/components/providers/SmoothScroll";
-import { IntroScreen } from "@/components/providers/IntroScreen";
+import { LuxuryIntro } from "@/components/intro/LuxuryIntro";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import "../globals.css";
@@ -97,8 +97,8 @@ export default async function LocaleLayout({
           >
             {tCommon("skipToContent")}
           </a>
+          <LuxuryIntro />
           <SmoothScroll>
-            <IntroScreen />
             <Navbar />
             <main id="main">{children}</main>
             <Footer />

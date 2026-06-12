@@ -2,26 +2,14 @@ import { setRequestLocale, getTranslations } from "next-intl/server";
 import type { Metadata } from "next";
 import type { Locale } from "@/i18n/routing";
 import { buildMetadata } from "@/lib/seo";
-import { whatsappUrl } from "@/lib/site";
 import { PageHero } from "@/components/layout/PageHero";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { MediaRow } from "@/components/ui/MediaRow";
-import { VehicleSection } from "@/features/receptif/VehicleSection";
+import { FleetCarousel, type FleetCard } from "@/features/receptif/FleetCarousel";
+import { fleet } from "@/features/receptif/fleet";
 import { CtaBand } from "@/components/layout/CtaBand";
 
-type Vehicle = {
-  name: string;
-  tagline: string;
-  description: string;
-  passengers: string;
-  features: string[];
-};
-
-const VEHICLE_IMAGES = [
-  "/images/mercedes-classe-v.jpg",
-  "/images/mercedes-sprinter.jpg",
-  "/images/mercedes-autocar.jpg",
-];
+type Vehicle = { name: string };
 
 export async function generateMetadata({
   params,
@@ -41,7 +29,16 @@ export default async function ReceptifPage({
   setRequestLocale(locale);
   const t = await getTranslations("receptif");
   const tv = await getTranslations("vehicules");
-  const fleet = tv.raw("items") as Vehicle[];
+  const tc = await getTranslations("common");
+  const vehicles = tv.raw("items") as Vehicle[];
+  const subtitles = tv.raw("subtitles") as string[];
+
+  const cards: FleetCard[] = fleet.map((f, i) => ({
+    slug: f.slug,
+    image: f.images[0]!,
+    name: vehicles[i]?.name ?? "",
+    subtitle: subtitles[i] ?? "",
+  }));
 
   return (
     <>
@@ -61,24 +58,8 @@ export default async function ReceptifPage({
             title={t("transport.title")}
             lead={t("transport.lead")}
           />
-          <div className="mt-20 space-y-24 md:space-y-32">
-            {fleet.map((v, i) => (
-              <VehicleSection
-                key={v.name}
-                image={VEHICLE_IMAGES[i] ?? VEHICLE_IMAGES[0]!}
-                title={v.name}
-                tagline={v.tagline}
-                description={v.description}
-                capacityLabel={tv("capacityLabel")}
-                capacity={v.passengers}
-                featuresLabel={tv("featuresLabel")}
-                features={v.features}
-                reserveLabel={tv("reserve")}
-                reserveHref={whatsappUrl(
-                  `Bonjour Konciergate, je souhaite réserver la ${v.name}.`,
-                )}
-              />
-            ))}
+          <div className="mt-16">
+            <FleetCarousel cards={cards} discoverLabel={tc("discover")} />
           </div>
         </div>
       </section>

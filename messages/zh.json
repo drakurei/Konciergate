@@ -222,6 +222,14 @@
     "passengersUnit": "名乘客",
     "featuresLabel": "配置",
     "reserve": "通过 WhatsApp 预订",
+    "presentationLabel": "介绍",
+    "galleryLabel": "图库",
+    "backToReceptif": "返回地接服务",
+    "subtitles": [
+      "为您的私人接送而生的精致。",
+      "为您的团队带来空间与舒适。",
+      "大型出行的标杆之选。"
+    ],
     "items": [
       {
         "name": "梅赛德斯 V 级",

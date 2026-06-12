@@ -222,6 +222,14 @@
     "passengersUnit": "pasajeros",
     "featuresLabel": "Equipamiento",
     "reserve": "Reservar en WhatsApp",
+    "presentationLabel": "Presentación",
+    "galleryLabel": "Galería",
+    "backToReceptif": "Volver al Receptivo",
+    "subtitles": [
+      "El refinamiento para sus traslados privados.",
+      "Espacio y confort para sus grupos.",
+      "La referencia para sus grandes desplazamientos."
+    ],
     "items": [
       {
         "name": "Mercedes Clase V",

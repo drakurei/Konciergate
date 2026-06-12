@@ -222,6 +222,14 @@
     "passengersUnit": "Passagiere",
     "featuresLabel": "Ausstattung",
     "reserve": "Auf WhatsApp buchen",
+    "presentationLabel": "Überblick",
+    "galleryLabel": "Galerie",
+    "backToReceptif": "Zurück zum Incoming",
+    "subtitles": [
+      "Raffinesse für Ihre privaten Transfers.",
+      "Raum und Komfort für Ihre Gruppen.",
+      "Die Referenz für Ihre großen Reisen."
+    ],
     "items": [
       {
         "name": "Mercedes V-Klasse",

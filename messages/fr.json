@@ -271,8 +271,31 @@
   "apropos": {
     "hero": {
       "eyebrow": "À propos",
-      "title": "L'art du réceptif d'exception.",
-      "subtitle": "Une maison fondée sur une conviction : chaque séjour mérite d'être unique."
+      "title": "Notre histoire",
+      "subtitle": "Créer des expériences qui marquent les esprits."
+    },
+    "timeline": {
+      "title": "Notre parcours.",
+      "items": [
+        { "step": "Création", "text": "La naissance de Konciergate, d'une conviction : chaque séjour mérite d'être unique." },
+        { "step": "Vision", "text": "Réunir transport, hébergement, billetterie et expériences sous un seul contact d'exception." },
+        { "step": "Développement", "text": "Un réseau de partenaires triés sur le volet à travers cinq pays européens." },
+        { "step": "Ambitions", "text": "Devenir la référence du réceptif de luxe et des expériences football en Europe." }
+      ]
+    },
+    "explore": {
+      "title": "Notre univers.",
+      "items": [
+        { "title": "Réceptif", "text": "Transport, hôtels et adresses d'exception." },
+        { "title": "Événements", "text": "Séminaires, galas et réceptions sur mesure." },
+        { "title": "K.ORIGINAL", "text": "Le football européen, en privilégié." },
+        { "title": "Destinations", "text": "Cinq pays, une même exigence du détail." }
+      ]
+    },
+    "cta": {
+      "title": "Prêt à imaginer votre prochaine expérience ?",
+      "contact": "Nous contacter",
+      "whatsapp": "WhatsApp"
     },
     "story": {
       "p1": "Konciergate est né d'une exigence simple et rare : offrir à chaque client une expérience européenne pensée dans le moindre détail, du premier transfert à la dernière réservation.",

@@ -271,8 +271,31 @@
   "apropos": {
     "hero": {
       "eyebrow": "Chi siamo",
-      "title": "L'arte del servizio incoming d'eccellenza.",
-      "subtitle": "Una maison fondata su una convinzione: ogni soggiorno merita di essere unico."
+      "title": "La nostra storia",
+      "subtitle": "Creare esperienze che lasciano il segno."
+    },
+    "timeline": {
+      "title": "Il nostro percorso.",
+      "items": [
+        { "step": "Creazione", "text": "La nascita di Konciergate, da una convinzione: ogni soggiorno merita di essere unico." },
+        { "step": "Visione", "text": "Riunire trasporto, alloggio, biglietteria ed esperienze sotto un unico contatto d'eccezione." },
+        { "step": "Sviluppo", "text": "Una rete di partner selezionati con cura in cinque paesi europei." },
+        { "step": "Ambizioni", "text": "Diventare il riferimento dell'incoming di lusso e delle esperienze calcistiche in Europa." }
+      ]
+    },
+    "explore": {
+      "title": "Il nostro universo.",
+      "items": [
+        { "title": "Incoming", "text": "Trasporto, hotel e indirizzi d'eccezione." },
+        { "title": "Eventi", "text": "Seminari, gala e ricevimenti su misura." },
+        { "title": "K.ORIGINAL", "text": "Il calcio europeo, da privilegiato." },
+        { "title": "Destinazioni", "text": "Cinque paesi, un'unica esigenza del dettaglio." }
+      ]
+    },
+    "cta": {
+      "title": "Pronti a immaginare la vostra prossima esperienza?",
+      "contact": "Contattaci",
+      "whatsapp": "WhatsApp"
     },
     "story": {
       "p1": "Konciergate è nata da un'esigenza semplice e rara: offrire a ogni cliente un'esperienza europea pensata fin nel minimo dettaglio, dal primo transfer all'ultima prenotazione.",

@@ -271,8 +271,31 @@
   "apropos": {
     "hero": {
       "eyebrow": "Über uns",
-      "title": "Die Kunst des außergewöhnlichen Incoming-Service.",
-      "subtitle": "Ein Haus, gegründet auf einer Überzeugung: Jeder Aufenthalt verdient es, einzigartig zu sein."
+      "title": "Unsere Geschichte",
+      "subtitle": "Erlebnisse schaffen, die in Erinnerung bleiben."
+    },
+    "timeline": {
+      "title": "Unser Weg.",
+      "items": [
+        { "step": "Gründung", "text": "Die Geburt von Konciergate, aus einer Überzeugung: Jeder Aufenthalt verdient es, einzigartig zu sein." },
+        { "step": "Vision", "text": "Transport, Unterkunft, Ticketing und Erlebnisse unter einem einzigen außergewöhnlichen Ansprechpartner vereinen." },
+        { "step": "Entwicklung", "text": "Ein Netzwerk handverlesener Partner in fünf europäischen Ländern." },
+        { "step": "Ambitionen", "text": "Die Referenz für Luxus-Incoming und Fußballerlebnisse in Europa werden." }
+      ]
+    },
+    "explore": {
+      "title": "Unsere Welt.",
+      "items": [
+        { "title": "Incoming", "text": "Transport, Hotels und außergewöhnliche Adressen." },
+        { "title": "Events", "text": "Seminare, Galas und maßgeschneiderte Empfänge." },
+        { "title": "K.ORIGINAL", "text": "Europäischer Fußball, als privilegierter Gast." },
+        { "title": "Reiseziele", "text": "Fünf Länder, ein Anspruch ans Detail." }
+      ]
+    },
+    "cta": {
+      "title": "Bereit, Ihr nächstes Erlebnis zu gestalten?",
+      "contact": "Kontakt",
+      "whatsapp": "WhatsApp"
     },
     "story": {
       "p1": "Konciergate entstand aus einem einfachen, seltenen Anspruch: jedem Kunden ein europäisches Erlebnis zu bieten, das bis ins kleinste Detail durchdacht ist, vom ersten Transfer bis zur letzten Reservierung.",

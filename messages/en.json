@@ -271,8 +271,31 @@
   "apropos": {
     "hero": {
       "eyebrow": "About",
-      "title": "The art of exceptional inbound services.",
-      "subtitle": "A house founded on one conviction: every stay deserves to be unique."
+      "title": "Our story",
+      "subtitle": "Creating experiences that leave a mark."
+    },
+    "timeline": {
+      "title": "Our journey.",
+      "items": [
+        { "step": "Creation", "text": "The birth of Konciergate, from one conviction: every stay deserves to be unique." },
+        { "step": "Vision", "text": "Bringing transport, accommodation, ticketing and experiences together under a single exceptional contact." },
+        { "step": "Growth", "text": "A network of hand-picked partners across five European countries." },
+        { "step": "Ambitions", "text": "To become the benchmark for luxury inbound services and football experiences in Europe." }
+      ]
+    },
+    "explore": {
+      "title": "Our world.",
+      "items": [
+        { "title": "Inbound", "text": "Transport, hotels and exceptional addresses." },
+        { "title": "Events", "text": "Seminars, galas and bespoke receptions." },
+        { "title": "K.ORIGINAL", "text": "European football, as a privileged guest." },
+        { "title": "Destinations", "text": "Five countries, one standard of detail." }
+      ]
+    },
+    "cta": {
+      "title": "Ready to imagine your next experience?",
+      "contact": "Contact us",
+      "whatsapp": "WhatsApp"
     },
     "story": {
       "p1": "Konciergate was born from a simple, rare standard: to offer every client a European experience considered in the smallest detail, from the first transfer to the last reservation.",

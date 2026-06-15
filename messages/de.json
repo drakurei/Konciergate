@@ -273,7 +273,26 @@
     "hero": {
       "eyebrow": "Über uns",
       "title": "Unsere Geschichte",
-      "subtitle": "Eine Vision, geboren aus der Obsession fürs Detail."
+      "subtitle": "Eine Vision, geboren aus der Obsession fürs Detail.",
+      "lines": [
+        "Wir wollten nie eine Agentur sein.",
+        "Wir wollten das Außergewöhnliche vereinfachen.",
+        "Eine einzige Signatur."
+      ]
+    },
+    "journey": {
+      "title": "Ein Tag mit Konciergate.",
+      "items": [
+        "Ankunft am Flughafen",
+        "Privater Transfer",
+        "Hotel-Check-in",
+        "VIP-Erlebnis",
+        "Rückkehr"
+      ]
+    },
+    "world": {
+      "title": "Die Welt von Konciergate.",
+      "lead": "Von Paris bis Dubai — eine einzige Signatur, weltweit."
     },
     "timeline": {
       "title": "Unser Weg.",

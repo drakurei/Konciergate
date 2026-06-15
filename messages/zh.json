@@ -273,7 +273,20 @@
     "hero": {
       "eyebrow": "关于我们",
       "title": "我们的故事",
-      "subtitle": "源于对细节执着的愿景。"
+      "subtitle": "源于对细节执着的愿景。",
+      "lines": [
+        "我们从不想成为一家中介。",
+        "我们只想化繁为简，成就非凡。",
+        "唯一的签名。"
+      ]
+    },
+    "journey": {
+      "title": "与 Konciergate 的一天。",
+      "items": ["抵达机场", "专车接送", "入住酒店", "VIP 体验", "返程"]
+    },
+    "world": {
+      "title": "Konciergate 的世界。",
+      "lead": "从巴黎到迪拜，全球唯一的签名。"
     },
     "timeline": {
       "title": "我们的历程。",

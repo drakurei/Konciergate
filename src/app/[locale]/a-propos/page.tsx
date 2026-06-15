@@ -9,16 +9,21 @@ import { Reveal } from "@/components/ui/Reveal";
 import { Button } from "@/components/ui/Button";
 import { Stats } from "@/features/home/Stats";
 import { AproposHero } from "@/features/apropos/AproposHero";
+import { AproposJourney } from "@/features/apropos/AproposJourney";
 import { AproposTimeline } from "@/features/apropos/AproposTimeline";
 import { FounderBlock } from "@/features/apropos/FounderBlock";
 import {
   AproposCarousel,
   type ExploreSlide,
 } from "@/features/apropos/AproposCarousel";
+import { DestinationCard } from "@/features/destinations/DestinationCard";
+import { cities } from "@/features/destinations/cities";
 
 type Step = { step: string; text: string };
 type Explore = { title: string; text: string };
+type City = { name: string; text: string };
 
+const TIMELINE_YEARS = ["2023", "2024", "2025", "2026"];
 const TIMELINE_IMAGES = [
   "/images/apropos-hero.jpg",
   "/images/receptif-concierge.jpg",
@@ -62,10 +67,14 @@ export default async function AProposPage({
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations("apropos");
+  const td = await getTranslations("destinations");
 
+  const lines = t.raw("hero.lines") as string[];
   const timeline = t.raw("timeline.items") as Step[];
+  const journey = t.raw("journey.items") as string[];
   const explore = t.raw("explore.items") as Explore[];
   const coulisses = t.raw("coulisses.items") as string[];
+  const destItems = td.raw("items") as City[];
 
   const slides: ExploreSlide[] = explore.map((e, i) => ({
     href: EXPLORE_META[i]?.href ?? "/",
@@ -77,14 +86,10 @@ export default async function AProposPage({
 
   return (
     <>
-      {/* S1 — Hero vidéo */}
-      <AproposHero
-        eyebrow={t("hero.eyebrow")}
-        title={t("hero.title")}
-        subtitle={t("hero.subtitle")}
-      />
+      {/* S1 — Hero cinématographique */}
+      <AproposHero lines={lines} />
 
-      {/* S2 — L'origine (storytelling magazine) */}
+      {/* S2 — Pourquoi Konciergate existe */}
       <section className="bg-black py-20 text-white md:py-28">
         <div className="shell">
           <Reveal>
@@ -119,10 +124,18 @@ export default async function AProposPage({
         </div>
       </section>
 
-      {/* S3 — Timeline immersive */}
-      <AproposTimeline title={t("timeline.title")} items={timeline} images={TIMELINE_IMAGES} />
+      {/* S3 — Une journée avec Konciergate */}
+      <AproposJourney title={t("journey.title")} items={journey} />
 
-      {/* S4 — Les coulisses */}
+      {/* S4 — Notre parcours (timeline immersive) */}
+      <AproposTimeline
+        title={t("timeline.title")}
+        items={timeline}
+        images={TIMELINE_IMAGES}
+        years={TIMELINE_YEARS}
+      />
+
+      {/* S5 — Le travail invisible */}
       <section className="bg-ink py-20 text-white md:py-28">
         <div className="shell">
           <Reveal>
@@ -159,7 +172,7 @@ export default async function AProposPage({
         </div>
       </section>
 
-      {/* S5 — Le fondateur */}
+      {/* S6 — Le fondateur */}
       <FounderBlock
         quote={t("quote.text")}
         author={t("quote.author")}
@@ -167,11 +180,51 @@ export default async function AProposPage({
         bio={t("founderBio")}
       />
 
-      {/* S6 — Nos chiffres */}
+      {/* S7 — Le monde Konciergate */}
+      <section className="bg-black py-20 text-white md:py-28">
+        <div className="shell">
+          <Reveal>
+            <h2 className="text-3xl font-light tracking-tight md:text-5xl">
+              {t("world.title")}
+            </h2>
+          </Reveal>
+          <Reveal delay={0.08}>
+            <p className="mt-5 max-w-2xl text-lg font-light text-white/60">
+              {t("world.lead")}
+            </p>
+          </Reveal>
+          <div className="mt-12 grid grid-cols-2 gap-5 md:grid-cols-3">
+            {cities.map((slug, i) => (
+              <Reveal key={slug} delay={(i % 3) * 0.08}>
+                <DestinationCard
+                  slug={slug}
+                  index={i}
+                  name={destItems[i]?.name ?? slug}
+                  tagline={destItems[i]?.text ?? ""}
+                />
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* S8 — Nos univers */}
+      <section className="bg-ink py-20 text-white md:py-28">
+        <div className="shell">
+          <Reveal>
+            <h2 className="mb-12 text-3xl font-light tracking-tight md:text-5xl">
+              {t("explore.title")}
+            </h2>
+          </Reveal>
+          <AproposCarousel slides={slides} />
+        </div>
+      </section>
+
+      {/* S9 — Chiffres */}
       <Stats />
 
-      {/* S7 — Vidéo immersive plein écran (aucun texte) */}
-      <section className="relative h-[70svh] min-h-[420px] overflow-hidden bg-black">
+      {/* S10 — Final */}
+      <section className="relative flex h-[90svh] min-h-[520px] items-center justify-center overflow-hidden bg-black text-center">
         <video
           className="absolute inset-0 h-full w-full object-cover"
           autoPlay
@@ -183,26 +236,10 @@ export default async function AProposPage({
         >
           <source src={asset("/videos/hero.mp4")} type="video/mp4" />
         </video>
-        <div className="absolute inset-0 bg-black/20" />
-      </section>
-
-      {/* S8 — Nos univers */}
-      <section className="bg-black py-20 text-white md:py-28">
-        <div className="shell">
+        <div className="absolute inset-0 bg-black/55" />
+        <div className="shell relative z-10 flex flex-col items-center">
           <Reveal>
-            <h2 className="mb-12 text-3xl font-light tracking-tight md:text-5xl">
-              {t("explore.title")}
-            </h2>
-          </Reveal>
-          <AproposCarousel slides={slides} />
-        </div>
-      </section>
-
-      {/* S9 — CTA final */}
-      <section className="bg-ink py-24 text-white md:py-32">
-        <div className="shell flex flex-col items-center text-center">
-          <Reveal>
-            <h2 className="max-w-3xl text-balance text-4xl font-light tracking-tight md:text-6xl">
+            <h2 className="max-w-3xl text-balance text-4xl font-light tracking-tight text-white md:text-6xl">
               {t("cta.title")}
             </h2>
           </Reveal>

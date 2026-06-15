@@ -273,7 +273,26 @@
     "hero": {
       "eyebrow": "Chi siamo",
       "title": "La nostra storia",
-      "subtitle": "Una visione nata dall'ossessione per il dettaglio."
+      "subtitle": "Una visione nata dall'ossessione per il dettaglio.",
+      "lines": [
+        "Non abbiamo mai voluto essere un'agenzia.",
+        "Volevamo semplificare lo straordinario.",
+        "Un'unica firma."
+      ]
+    },
+    "journey": {
+      "title": "Una giornata con Konciergate.",
+      "items": [
+        "Arrivo in aeroporto",
+        "Transfer privato",
+        "Check-in in hotel",
+        "Esperienza VIP",
+        "Ritorno"
+      ]
+    },
+    "world": {
+      "title": "Il mondo Konciergate.",
+      "lead": "Da Parigi a Dubai, un'unica firma in tutto il mondo."
     },
     "timeline": {
       "title": "Il nostro percorso.",

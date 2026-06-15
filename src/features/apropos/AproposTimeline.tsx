@@ -12,10 +12,12 @@ export function AproposTimeline({
   title,
   items,
   images,
+  years,
 }: {
   title: string;
   items: Step[];
   images: string[];
+  years: string[];
 }) {
   const ref = useRef<HTMLDivElement>(null);
 
@@ -72,10 +74,10 @@ export function AproposTimeline({
                     <div className="absolute inset-0 bg-black/20" />
                   </div>
                   <div className={reverse ? "md:order-1 md:pr-6" : "md:pl-6"}>
-                    <span className="text-sm font-medium tabular-nums tracking-[0.2em] text-white/40">
-                      {String(i + 1).padStart(2, "0")}
+                    <span className="block text-5xl font-semibold tabular-nums tracking-tight text-white md:text-7xl">
+                      {years[i] ?? String(i + 1)}
                     </span>
-                    <h3 className="mt-3 text-2xl font-medium tracking-tight md:text-4xl">
+                    <h3 className="mt-3 text-xl font-medium uppercase tracking-[0.16em] text-white/80 md:text-2xl">
                       {it.step}
                     </h3>
                     <p className="mt-4 max-w-md text-lg font-light leading-relaxed text-white/65">

@@ -14,10 +14,12 @@ export function FounderBlock({
   quote,
   author,
   role,
+  bio,
 }: {
   quote: string;
   author: string;
   role: string;
+  bio: string;
 }) {
   const ref = useRef<HTMLDivElement>(null);
   const reduce = useReducedMotion();
@@ -58,10 +60,15 @@ export function FounderBlock({
             </h2>
           </Reveal>
           <Reveal delay={0.12}>
-            <div className="mt-8 h-px w-16 bg-white/30" />
+            <p className="mt-8 max-w-xl text-lg font-light leading-relaxed text-white/65">
+              {bio}
+            </p>
           </Reveal>
           <Reveal delay={0.16}>
-            <blockquote className="mt-8 max-w-xl text-balance text-2xl font-light leading-[1.4] tracking-tight text-white/85 md:text-3xl">
+            <div className="mt-8 h-px w-16 bg-white/30" />
+          </Reveal>
+          <Reveal delay={0.2}>
+            <blockquote className="mt-8 max-w-xl text-balance text-2xl font-light leading-[1.4] tracking-tight text-white/90 md:text-3xl">
               <span className="font-display text-white/40">“</span>
               {quote}
               <span className="font-display text-white/40">”</span>

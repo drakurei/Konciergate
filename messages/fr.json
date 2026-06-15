@@ -273,7 +273,7 @@
     "hero": {
       "eyebrow": "À propos",
       "title": "Notre histoire",
-      "subtitle": "Créer des expériences qui marquent les esprits."
+      "subtitle": "Une vision née d'une obsession du détail."
     },
     "timeline": {
       "title": "Notre parcours.",
@@ -294,10 +294,20 @@
       ]
     },
     "cta": {
-      "title": "Prêt à imaginer votre prochaine expérience ?",
+      "title": "L'excellence n'est jamais un hasard.",
       "contact": "Nous contacter",
       "whatsapp": "WhatsApp"
     },
+    "origin": {
+      "eyebrow": "L'origine",
+      "title": "Simplifier l'extraordinaire."
+    },
+    "coulisses": {
+      "title": "Le travail invisible.",
+      "lead": "Derrière chaque expérience, une orchestration minutieuse — du premier contact au dernier détail.",
+      "items": ["Transport", "Hospitalité", "Billetterie", "Événements", "Football"]
+    },
+    "founderBio": "De l'hôtellerie de luxe au sport de haut niveau, Nicolas Dufau a fondé Konciergate avec une conviction : le vrai luxe, c'est la fluidité. Réunir sous un seul contact ce qui en demandait dix.",
     "story": {
       "p1": "Konciergate est né d'une exigence simple et rare : offrir à chaque client une expérience européenne pensée dans le moindre détail, du premier transfert à la dernière réservation.",
       "p2": "Transport, hébergement, billetterie, événements et expériences football : nous réunissons tout sous un seul contact, pour une fluidité absolue et une discrétion totale."

@@ -11,6 +11,7 @@ export type ExploreSlide = {
   image: string;
   title: string;
   text: string;
+  video?: string;
 };
 
 /** Carrousel immersif Embla présentant les univers Konciergate. */
@@ -44,6 +45,14 @@ export function AproposCarousel({ slides }: { slides: ExploreSlide[] }) {
             >
               <Link
                 href={s.href}
+                onMouseEnter={(e) => {
+                  const v = e.currentTarget.querySelector("video");
+                  if (v) (v as HTMLVideoElement).play().catch(() => {});
+                }}
+                onMouseLeave={(e) => {
+                  const v = e.currentTarget.querySelector("video");
+                  if (v) { (v as HTMLVideoElement).pause(); (v as HTMLVideoElement).currentTime = 0; }
+                }}
                 className="group relative block overflow-hidden rounded-[var(--radius-lg)]"
               >
                 <div className="relative aspect-[3/4]">
@@ -54,6 +63,18 @@ export function AproposCarousel({ slides }: { slides: ExploreSlide[] }) {
                     sizes="(max-width: 768px) 85vw, 42vw"
                     className="object-cover transition-transform duration-[1.6s] ease-[var(--ease-luxe)] group-hover:scale-105"
                   />
+                  {s.video && (
+                    <video
+                      className="absolute inset-0 hidden h-full w-full object-cover opacity-0 transition-opacity duration-700 group-hover:opacity-100 md:block"
+                      muted
+                      loop
+                      playsInline
+                      preload="none"
+                      poster={asset(s.image)}
+                    >
+                      <source src={asset(s.video)} type="video/mp4" />
+                    </video>
+                  )}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent" />
                 </div>
                 <div className="absolute inset-x-0 bottom-0 p-8 md:p-10">

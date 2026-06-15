@@ -1,80 +1,91 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import Image from "next/image";
 import gsap from "gsap";
+import { asset } from "@/lib/utils";
 
 type Step = { step: string; text: string };
 
-/** Timeline verticale premium, révélée progressivement au scroll (GSAP). */
-export function AproposTimeline({ title, items }: { title: string; items: Step[] }) {
+/** Timeline immersive : chaque étape = texte + photo, révélée au scroll (GSAP). */
+export function AproposTimeline({
+  title,
+  items,
+  images,
+}: {
+  title: string;
+  items: Step[];
+  images: string[];
+}) {
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
     const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    const entries = el.querySelectorAll("[data-step]");
-    const line = el.querySelector("[data-line]");
+    const rows = el.querySelectorAll("[data-row]");
     if (reduce) {
-      gsap.set([...entries], { opacity: 1, y: 0 });
-      gsap.set(line, { scaleY: 1 });
+      gsap.set(rows, { opacity: 1, y: 0 });
       return;
     }
-    gsap.set(entries, { opacity: 0, y: 40 });
-    gsap.set(line, { scaleY: 0, transformOrigin: "top" });
-    const io = new IntersectionObserver(
-      (obs) => {
-        obs.forEach((e) => {
-          if (e.isIntersecting) {
-            gsap.to(line, { scaleY: 1, duration: 1.4, ease: "power2.out" });
-            gsap.to(entries, {
-              opacity: 1,
-              y: 0,
-              duration: 0.9,
-              ease: "power3.out",
-              stagger: 0.25,
-            });
-            io.disconnect();
-          }
-        });
-      },
-      { threshold: 0.25 },
-    );
-    io.observe(el);
-    return () => io.disconnect();
+    rows.forEach((row) => {
+      gsap.set(row, { opacity: 0, y: 48 });
+      const io = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e) => {
+            if (e.isIntersecting) {
+              gsap.to(row, { opacity: 1, y: 0, duration: 1, ease: "power3.out" });
+              io.disconnect();
+            }
+          });
+        },
+        { threshold: 0.25 },
+      );
+      io.observe(row);
+    });
   }, []);
 
   return (
-    <section className="bg-black py-24 text-white md:py-36">
+    <section className="bg-black py-20 text-white md:py-28">
       <div className="shell">
-        <h2 className="mb-16 text-3xl font-light tracking-tight md:text-5xl">
-          {title}
-        </h2>
-        <div ref={ref} className="relative pl-10 md:pl-16">
-          {/* Ligne verticale animée */}
-          <span
-            data-line
-            className="absolute left-[6px] top-2 h-[calc(100%-1rem)] w-px bg-gold/60 md:left-3"
-          />
-          <ol className="space-y-14 md:space-y-20">
-            {items.map((it, i) => (
-              <li data-step key={it.step} className="relative">
-                <span className="absolute -left-10 top-1.5 flex h-3.5 w-3.5 items-center justify-center md:-left-[3.7rem]">
-                  <span className="h-3.5 w-3.5 rounded-full border border-gold bg-black" />
-                  <span className="absolute h-1.5 w-1.5 rounded-full bg-gold" />
-                </span>
-                <p className="text-sm font-medium tabular-nums tracking-[0.2em] text-gold-light">
-                  {String(i + 1).padStart(2, "0")}
-                </p>
-                <h3 className="mt-2 text-2xl font-medium tracking-tight md:text-3xl">
-                  {it.step}
-                </h3>
-                <p className="mt-3 max-w-2xl text-lg font-light leading-relaxed text-white/65">
-                  {it.text}
-                </p>
-              </li>
-            ))}
-          </ol>
+        <h2 className="mb-16 text-3xl font-light tracking-tight md:text-5xl">{title}</h2>
+        <div ref={ref} className="relative border-l border-white/15 pl-8 md:pl-0 md:border-l-0">
+          <div className="space-y-16 md:space-y-24">
+            {items.map((it, i) => {
+              const reverse = i % 2 === 1;
+              return (
+                <div
+                  data-row
+                  key={it.step}
+                  className="grid items-center gap-8 md:grid-cols-2 md:gap-16"
+                >
+                  <div
+                    className={`relative aspect-[16/10] overflow-hidden rounded-[var(--radius-lg)] ${reverse ? "md:order-2" : ""}`}
+                  >
+                    <Image
+                      src={asset(images[i] ?? images[0]!)}
+                      alt={it.step}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                      className="object-cover"
+                    />
+                    <div className="absolute inset-0 bg-black/20" />
+                  </div>
+                  <div className={reverse ? "md:order-1 md:pr-6" : "md:pl-6"}>
+                    <span className="text-sm font-medium tabular-nums tracking-[0.2em] text-white/40">
+                      {String(i + 1).padStart(2, "0")}
+                    </span>
+                    <h3 className="mt-3 text-2xl font-medium tracking-tight md:text-4xl">
+                      {it.step}
+                    </h3>
+                    <p className="mt-4 max-w-md text-lg font-light leading-relaxed text-white/65">
+                      {it.text}
+                    </p>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
         </div>
       </div>
     </section>

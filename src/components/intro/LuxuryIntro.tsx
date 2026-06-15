@@ -5,8 +5,8 @@ import gsap from "gsap";
 import { asset } from "@/lib/utils";
 
 const SESSION_KEY = "introSeen";
-/** Durée d'affichage de la vidéo avant la transition de sortie (4–5 s). */
-const HOLD_MS = 4500;
+/** Durée d'affichage de la vidéo avant la transition (laisse voir l'arrivée). */
+const HOLD_MS = 6400;
 
 /**
  * Écran de chargement premium : UNIQUEMENT la vidéo (Mercedes Classe V noir),
@@ -49,11 +49,11 @@ export function LuxuryIntro() {
     };
 
     const ctx = gsap.context(() => {
-      // Zoom cinématique lent et continu (push-in discret).
+      // Très léger push-in (la vidéo a déjà son propre mouvement caméra).
       gsap.fromTo(
         videoRef.current,
-        { scale: 1.04 },
-        { scale: 1.12, duration: 5.4, ease: "none" },
+        { scale: 1.0 },
+        { scale: 1.05, duration: 7, ease: "none" },
       );
     }, rootRef);
 
@@ -81,9 +81,9 @@ export function LuxuryIntro() {
         loop
         playsInline
         preload="auto"
-        poster={asset("/videos/intro-poster.jpg")}
+        poster={asset("/videos/hero-poster.jpg")}
       >
-        <source src={asset("/videos/intro.mp4")} type="video/mp4" />
+        <source src={asset("/videos/hero.mp4")} type="video/mp4" />
       </video>
       {/* Voile très léger pour la profondeur, aucun texte */}
       <div className="absolute inset-0 bg-black/10" />

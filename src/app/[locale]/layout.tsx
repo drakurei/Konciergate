@@ -6,6 +6,7 @@ import { routing, type Locale } from "@/i18n/routing";
 import { siteConfig } from "@/lib/site";
 import { asset } from "@/lib/utils";
 import { buildMetadata } from "@/lib/seo";
+import { generalSans } from "@/app/fonts";
 import { SmoothScroll } from "@/components/providers/SmoothScroll";
 import { LuxuryIntro } from "@/components/intro/LuxuryIntro";
 import { Navbar } from "@/components/layout/Navbar";
@@ -85,7 +86,7 @@ export default async function LocaleLayout({
   };
 
   return (
-    <html lang={locale} suppressHydrationWarning>
+    <html lang={locale} className={generalSans.variable} suppressHydrationWarning>
       <body className="antialiased">
         <script
           type="application/ld+json"

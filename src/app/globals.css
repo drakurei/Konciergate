@@ -22,10 +22,10 @@
   --color-line: #e6e6e6;
   --color-line-dark: rgba(255, 255, 255, 0.12);
 
-  /* — Typographie : Apple SF Pro Display + fallbacks (brief) — */
-  --font-sans: -apple-system, BlinkMacSystemFont, "SF Pro Display",
-    "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
-  --font-display: -apple-system, BlinkMacSystemFont, "SF Pro Display",
+  /* — Typographie premium : General Sans (auto-hébergée) + fallbacks système — */
+  --font-sans: var(--font-general), -apple-system, BlinkMacSystemFont,
+    "Helvetica Neue", Arial, sans-serif;
+  --font-display: var(--font-general), -apple-system, BlinkMacSystemFont,
     "Helvetica Neue", Arial, sans-serif;
 
   /* — Rythme & rayons — */

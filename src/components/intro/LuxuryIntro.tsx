@@ -2,34 +2,22 @@
 
 import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
-import { Logo } from "@/components/ui/Logo";
 import { asset } from "@/lib/utils";
 
 const SESSION_KEY = "introSeen";
+/** Durée d'affichage de la vidéo avant la transition de sortie (4–5 s). */
+const HOLD_MS = 4500;
 
 /**
- * Écran d'arrivée premium (~6 s) piloté par une timeline GSAP :
- *
- *  0.0s  vidéo cinématique plein écran (loading + intro)
- *  0.8s  logo + « KONCIERGATE » en fondu
- *  1.8s  sous-titre « Agence de Conciergerie Européenne »
- *  3.0s  ligne dorée animée
- *  4.0s  « Réceptif • Événements • Football VIP »
- *  5.0s  fondu progressif vers le noir
- *  5.5s  révélation du Hero (opacity → 0, scale → 1.05)
- *  6.0s  accueil totalement visible
- *
- * Joué une seule fois par session (sessionStorage "introSeen").
+ * Écran de chargement premium : UNIQUEMENT la vidéo (Mercedes Classe V noir),
+ * aucun texte / logo / branding. Léger zoom cinématique, puis fondu élégant
+ * vers la page d'accueil. Joué une seule fois par session.
  */
 export function LuxuryIntro() {
   const [show, setShow] = useState(false);
   const rootRef = useRef<HTMLDivElement>(null);
-  const logoRef = useRef<HTMLDivElement>(null);
-  const subtitleRef = useRef<HTMLParagraphElement>(null);
-  const lineRef = useRef<HTMLSpanElement>(null);
-  const tagsRef = useRef<HTMLParagraphElement>(null);
-  const blackRef = useRef<HTMLDivElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
+  const doneRef = useRef(false);
 
   useEffect(() => {
     const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -46,36 +34,32 @@ export function LuxuryIntro() {
     document.documentElement.style.overflow = "hidden";
 
     const finish = () => {
-      sessionStorage.setItem(SESSION_KEY, "true");
-      document.documentElement.style.overflow = "";
-      setShow(false);
+      if (doneRef.current) return;
+      doneRef.current = true;
+      gsap.to(rootRef.current, {
+        opacity: 0,
+        duration: 0.9,
+        ease: "power2.inOut",
+        onComplete: () => {
+          sessionStorage.setItem(SESSION_KEY, "true");
+          document.documentElement.style.overflow = "";
+          setShow(false);
+        },
+      });
     };
 
     const ctx = gsap.context(() => {
-      gsap.set([logoRef.current, subtitleRef.current, tagsRef.current], {
-        opacity: 0,
-        y: 22,
-      });
-      gsap.set(lineRef.current, { scaleX: 0, transformOrigin: "center" });
-      gsap.set(blackRef.current, { opacity: 0 });
-
-      // Zoom cinématique lent et continu sur la vidéo (push-in discret).
+      // Zoom cinématique lent et continu (push-in discret).
       gsap.fromTo(
         videoRef.current,
-        { scale: 1.02 },
-        { scale: 1.12, duration: 6.4, ease: "none" },
+        { scale: 1.04 },
+        { scale: 1.12, duration: 5.4, ease: "none" },
       );
-
-      const tl = gsap.timeline({ onComplete: finish });
-      tl.to(logoRef.current, { opacity: 1, y: 0, duration: 1, ease: "power3.out" }, 0.8)
-        .to(subtitleRef.current, { opacity: 1, y: 0, duration: 0.9, ease: "power3.out" }, 1.8)
-        .to(lineRef.current, { scaleX: 1, duration: 0.9, ease: "power2.out" }, 3.0)
-        .to(tagsRef.current, { opacity: 1, y: 0, duration: 0.9, ease: "power3.out" }, 4.0)
-        .to(blackRef.current, { opacity: 1, duration: 0.6, ease: "power1.inOut" }, 5.0)
-        .to(rootRef.current, { opacity: 0, scale: 1.05, duration: 0.6, ease: "power2.inOut" }, 5.5);
     }, rootRef);
 
+    const timer = window.setTimeout(finish, HOLD_MS);
     return () => {
+      window.clearTimeout(timer);
       ctx.revert();
       document.documentElement.style.overflow = "";
     };
@@ -86,9 +70,9 @@ export function LuxuryIntro() {
   return (
     <div
       ref={rootRef}
-      className="fixed inset-0 z-[300] flex items-center justify-center overflow-hidden bg-black"
+      className="fixed inset-0 z-[300] overflow-hidden bg-black"
+      aria-hidden
     >
-      {/* Vidéo cinématique */}
       <video
         ref={videoRef}
         className="absolute inset-0 h-full w-full object-cover"
@@ -101,38 +85,8 @@ export function LuxuryIntro() {
       >
         <source src={asset("/videos/intro.mp4")} type="video/mp4" />
       </video>
-
-      {/* Overlay noir léger permanent */}
-      <div className="absolute inset-0 bg-black/40" />
-
-      {/* Logo + textes centrés */}
-      <div className="relative z-10 flex flex-col items-center px-6 text-center">
-        <div ref={logoRef} className="flex flex-col items-center">
-          <Logo framed tone="light" className="h-16 w-16 md:h-20 md:w-20" />
-          <h1 className="mt-8 text-3xl font-light uppercase tracking-[0.4em] text-white md:text-5xl md:tracking-[0.5em]">
-            Konciergate
-          </h1>
-        </div>
-        <p
-          ref={subtitleRef}
-          className="mt-5 text-xs uppercase tracking-[0.32em] text-white/75 md:text-sm"
-        >
-          Agence de Conciergerie Européenne
-        </p>
-        <span
-          ref={lineRef}
-          className="mt-9 h-px w-16 bg-gold shadow-[0_0_12px_rgba(184,146,90,0.8)]"
-        />
-        <p
-          ref={tagsRef}
-          className="mt-9 text-[0.7rem] uppercase tracking-[0.28em] text-gold-light md:text-xs"
-        >
-          Réceptif • Événements • Football VIP
-        </p>
-      </div>
-
-      {/* Calque de fondu vers le noir (étape 5.0s) */}
-      <div ref={blackRef} className="absolute inset-0 z-20 bg-black" />
+      {/* Voile très léger pour la profondeur, aucun texte */}
+      <div className="absolute inset-0 bg-black/10" />
     </div>
   );
 }

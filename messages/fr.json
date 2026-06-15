@@ -74,12 +74,12 @@
       "eyebrow": "Réceptif & événements d'exception",
       "vipEyebrow": "Réceptif • Événements • Football VIP",
       "title": "Konciergate",
-      "subtitle": "L'Europe comme vos clients la méritent.",
+      "subtitle": "Le monde comme vos clients le méritent.",
       "ctaPrimary": "Découvrir",
       "ctaSecondary": "Nous contacter"
     },
     "manifesto": {
-      "title": "L'Europe comme vos clients la méritent.",
+      "title": "Le monde comme vos clients le méritent.",
       "body": "Notre équipe imagine et orchestre l'intégralité de leur séjour. Cet accompagnement nous permet d'offrir une expérience personnalisée et unique, fidèle à chaque exigence."
     },
     "services": {
@@ -257,15 +257,16 @@
   "destinations": {
     "hero": {
       "eyebrow": "Destinations",
-      "title": "L'Europe, orchestrée.",
-      "subtitle": "Cinq pays, une même exigence du détail."
+      "title": "Le monde, orchestré.",
+      "subtitle": "Des destinations d'exception, partout dans le monde."
     },
     "items": [
-      { "name": "France", "text": "De Paris à la Côte d'Azur, l'art de vivre français dans ce qu'il a de plus raffiné." },
-      { "name": "Espagne", "text": "Madrid, Barcelone, Saint-Sébastien : passion, gastronomie et grands stades." },
-      { "name": "Italie", "text": "Rome, Milan, la Toscane : patrimoine, élégance et tables d'exception." },
-      { "name": "Royaume-Uni", "text": "Londres et au-delà : héritage, prestige et événements de classe mondiale." },
-      { "name": "Suisse", "text": "Genève, Zurich, les Alpes : discrétion, précision et nature souveraine." }
+      { "name": "Paris", "text": "L'art de vivre à la française, dans ce qu'il a de plus raffiné." },
+      { "name": "Madrid", "text": "Passion, gastronomie et grands stades." },
+      { "name": "Milan", "text": "Élégance, mode et tables d'exception." },
+      { "name": "Londres", "text": "Héritage, prestige et événements de classe mondiale." },
+      { "name": "Genève", "text": "Discrétion, lac Léman et hôtellerie de luxe." },
+      { "name": "Dubaï", "text": "Démesure et hospitalité d'exception, entre désert et gratte-ciel." }
     ]
   },
   "apropos": {
@@ -353,7 +354,7 @@
     }
   },
   "footer": {
-    "tagline": "L'Europe comme vos clients la méritent.",
+    "tagline": "Le monde comme vos clients le méritent.",
     "navTitle": "Navigation",
     "contactTitle": "Contact",
     "legalTitle": "Informations",

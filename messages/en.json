@@ -74,12 +74,12 @@
       "eyebrow": "Exceptional inbound & events",
       "vipEyebrow": "Inbound • Events • VIP Football",
       "title": "Konciergate",
-      "subtitle": "Europe, exactly as your clients deserve it.",
+      "subtitle": "The world, exactly as your clients deserve it.",
       "ctaPrimary": "Discover",
       "ctaSecondary": "Contact us"
     },
     "manifesto": {
-      "title": "Europe, exactly as your clients deserve it.",
+      "title": "The world, exactly as your clients deserve it.",
       "body": "Our team designs and orchestrates their entire stay. This dedicated support lets us deliver a personalised, one-of-a-kind experience true to every expectation."
     },
     "services": {
@@ -257,15 +257,16 @@
   "destinations": {
     "hero": {
       "eyebrow": "Destinations",
-      "title": "Europe, orchestrated.",
-      "subtitle": "Five countries, one standard of detail."
+      "title": "The world, orchestrated.",
+      "subtitle": "Exceptional destinations, all around the world."
     },
     "items": [
-      { "name": "France", "text": "From Paris to the Côte d'Azur, French art de vivre at its most refined." },
-      { "name": "Spain", "text": "Madrid, Barcelona, San Sebastián: passion, gastronomy and great stadiums." },
-      { "name": "Italy", "text": "Rome, Milan, Tuscany: heritage, elegance and exceptional tables." },
-      { "name": "United Kingdom", "text": "London and beyond: heritage, prestige and world-class events." },
-      { "name": "Switzerland", "text": "Geneva, Zurich, the Alps: discretion, precision and sovereign nature." }
+      { "name": "Paris", "text": "French art de vivre at its most refined." },
+      { "name": "Madrid", "text": "Passion, gastronomy and great stadiums." },
+      { "name": "Milan", "text": "Elegance, fashion and exceptional tables." },
+      { "name": "London", "text": "Heritage, prestige and world-class events." },
+      { "name": "Geneva", "text": "Discretion, Lake Geneva and luxury hospitality." },
+      { "name": "Dubai", "text": "Grandeur and exceptional hospitality, between desert and skyline." }
     ]
   },
   "apropos": {
@@ -353,7 +354,7 @@
     }
   },
   "footer": {
-    "tagline": "Europe, exactly as your clients deserve it.",
+    "tagline": "The world, exactly as your clients deserve it.",
     "navTitle": "Navigation",
     "contactTitle": "Contact",
     "legalTitle": "Information",

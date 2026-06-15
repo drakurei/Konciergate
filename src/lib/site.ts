@@ -5,7 +5,7 @@
 export const siteConfig = {
   name: "Konciergate",
   legalName: "Konciergate",
-  tagline: "L'Europe comme vos clients la méritent.",
+  tagline: "Le monde comme vos clients le méritent.",
   url:
     process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") ??
     "https://www.konciergate.com",

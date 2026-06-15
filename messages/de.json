@@ -74,12 +74,12 @@
       "eyebrow": "Außergewöhnliches Incoming & Events",
       "vipEyebrow": "Incoming • Events • VIP-Fußball",
       "title": "Konciergate",
-      "subtitle": "Europa, wie es Ihre Kunden verdienen.",
+      "subtitle": "Die Welt, wie es Ihre Kunden verdienen.",
       "ctaPrimary": "Entdecken",
       "ctaSecondary": "Kontakt"
     },
     "manifesto": {
-      "title": "Europa, wie es Ihre Kunden verdienen.",
+      "title": "Die Welt, wie es Ihre Kunden verdienen.",
       "body": "Unser Team gestaltet und orchestriert ihren gesamten Aufenthalt. Diese persönliche Betreuung ermöglicht ein individuelles, einzigartiges Erlebnis, das jeder Erwartung gerecht wird."
     },
     "services": {
@@ -257,15 +257,16 @@
   "destinations": {
     "hero": {
       "eyebrow": "Reiseziele",
-      "title": "Europa, orchestriert.",
-      "subtitle": "Fünf Länder, ein Anspruch ans Detail."
+      "title": "Die Welt, orchestriert.",
+      "subtitle": "Außergewöhnliche Reiseziele, weltweit."
     },
     "items": [
-      { "name": "Frankreich", "text": "Von Paris bis zur Côte d'Azur, französische Lebenskunst in ihrer feinsten Form." },
-      { "name": "Spanien", "text": "Madrid, Barcelona, San Sebastián: Leidenschaft, Gastronomie und große Stadien." },
-      { "name": "Italien", "text": "Rom, Mailand, die Toskana: Erbe, Eleganz und außergewöhnliche Tische." },
-      { "name": "Vereinigtes Königreich", "text": "London und darüber hinaus: Erbe, Prestige und Weltklasse-Events." },
-      { "name": "Schweiz", "text": "Genf, Zürich, die Alpen: Diskretion, Präzision und souveräne Natur." }
+      { "name": "Paris", "text": "Französische Lebenskunst in ihrer feinsten Form." },
+      { "name": "Madrid", "text": "Leidenschaft, Gastronomie und große Stadien." },
+      { "name": "Mailand", "text": "Eleganz, Mode und außergewöhnliche Tische." },
+      { "name": "London", "text": "Erbe, Prestige und Weltklasse-Events." },
+      { "name": "Genf", "text": "Diskretion, Genfersee und Luxushotellerie." },
+      { "name": "Dubai", "text": "Grandezza und außergewöhnliche Gastlichkeit, zwischen Wüste und Skyline." }
     ]
   },
   "apropos": {
@@ -353,7 +354,7 @@
     }
   },
   "footer": {
-    "tagline": "Europa, wie es Ihre Kunden verdienen.",
+    "tagline": "Die Welt, wie es Ihre Kunden verdienen.",
     "navTitle": "Navigation",
     "contactTitle": "Kontakt",
     "legalTitle": "Informationen",

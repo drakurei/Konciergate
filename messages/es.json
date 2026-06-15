@@ -74,12 +74,12 @@
       "eyebrow": "Receptivo y eventos de excelencia",
       "vipEyebrow": "Receptivo • Eventos • Fútbol VIP",
       "title": "Konciergate",
-      "subtitle": "Europa como sus clientes la merecen.",
+      "subtitle": "El mundo como sus clientes lo merecen.",
       "ctaPrimary": "Descubrir",
       "ctaSecondary": "Contáctenos"
     },
     "manifesto": {
-      "title": "Europa como sus clientes la merecen.",
+      "title": "El mundo como sus clientes lo merecen.",
       "body": "Nuestro equipo planifica y ejecuta toda su estancia. Este acompañamiento nos permite brindar una experiencia personalizada y única, fiel a cada necesidad."
     },
     "services": {
@@ -257,15 +257,16 @@
   "destinations": {
     "hero": {
       "eyebrow": "Destinos",
-      "title": "Europa, orquestada.",
-      "subtitle": "Cinco países, una misma exigencia del detalle."
+      "title": "El mundo, orquestado.",
+      "subtitle": "Destinos de excepción, en todo el mundo."
     },
     "items": [
-      { "name": "Francia", "text": "De París a la Costa Azul, el arte de vivir francés en lo más refinado." },
-      { "name": "España", "text": "Madrid, Barcelona, San Sebastián: pasión, gastronomía y grandes estadios." },
-      { "name": "Italia", "text": "Roma, Milán, la Toscana: patrimonio, elegancia y mesas de excepción." },
-      { "name": "Reino Unido", "text": "Londres y más allá: legado, prestigio y eventos de clase mundial." },
-      { "name": "Suiza", "text": "Ginebra, Zúrich, los Alpes: discreción, precisión y naturaleza soberana." }
+      { "name": "París", "text": "El arte de vivir francés en lo más refinado." },
+      { "name": "Madrid", "text": "Pasión, gastronomía y grandes estadios." },
+      { "name": "Milán", "text": "Elegancia, moda y mesas de excepción." },
+      { "name": "Londres", "text": "Legado, prestigio y eventos de clase mundial." },
+      { "name": "Ginebra", "text": "Discreción, lago Lemán y hotelería de lujo." },
+      { "name": "Dubái", "text": "Grandeza y hospitalidad de excepción, entre desierto y rascacielos." }
     ]
   },
   "apropos": {
@@ -353,7 +354,7 @@
     }
   },
   "footer": {
-    "tagline": "Europa como sus clientes la merecen.",
+    "tagline": "El mundo como sus clientes lo merecen.",
     "navTitle": "Navegación",
     "contactTitle": "Contacto",
     "legalTitle": "Información",

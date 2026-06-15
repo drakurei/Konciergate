@@ -74,12 +74,12 @@
       "eyebrow": "Incoming ed eventi d'eccellenza",
       "vipEyebrow": "Incoming • Eventi • Calcio VIP",
       "title": "Konciergate",
-      "subtitle": "L'Europa come i vostri clienti la meritano.",
+      "subtitle": "Il mondo come i vostri clienti lo meritano.",
       "ctaPrimary": "Scopri",
       "ctaSecondary": "Contattaci"
     },
     "manifesto": {
-      "title": "L'Europa come i vostri clienti la meritano.",
+      "title": "Il mondo come i vostri clienti lo meritano.",
       "body": "Il nostro team progetta e orchestra l'intero soggiorno. Questo accompagnamento ci consente di offrire un'esperienza personalizzata e unica, fedele a ogni esigenza."
     },
     "services": {
@@ -257,15 +257,16 @@
   "destinations": {
     "hero": {
       "eyebrow": "Destinazioni",
-      "title": "L'Europa, orchestrata.",
-      "subtitle": "Cinque paesi, un'unica esigenza del dettaglio."
+      "title": "Il mondo, orchestrato.",
+      "subtitle": "Destinazioni d'eccezione, in tutto il mondo."
     },
     "items": [
-      { "name": "Francia", "text": "Da Parigi alla Costa Azzurra, l'arte di vivere francese nella sua forma più raffinata." },
-      { "name": "Spagna", "text": "Madrid, Barcellona, San Sebastián: passione, gastronomia e grandi stadi." },
-      { "name": "Italia", "text": "Roma, Milano, la Toscana: patrimonio, eleganza e tavole d'eccezione." },
-      { "name": "Regno Unito", "text": "Londra e oltre: eredità, prestigio ed eventi di classe mondiale." },
-      { "name": "Svizzera", "text": "Ginevra, Zurigo, le Alpi: discrezione, precisione e natura sovrana." }
+      { "name": "Parigi", "text": "L'arte di vivere francese nella sua forma più raffinata." },
+      { "name": "Madrid", "text": "Passione, gastronomia e grandi stadi." },
+      { "name": "Milano", "text": "Eleganza, moda e tavole d'eccezione." },
+      { "name": "Londra", "text": "Eredità, prestigio ed eventi di classe mondiale." },
+      { "name": "Ginevra", "text": "Discrezione, lago di Ginevra e ospitalità di lusso." },
+      { "name": "Dubai", "text": "Grandezza e ospitalità d'eccezione, tra deserto e grattacieli." }
     ]
   },
   "apropos": {
@@ -353,7 +354,7 @@
     }
   },
   "footer": {
-    "tagline": "L'Europa come i vostri clienti la meritano.",
+    "tagline": "Il mondo come i vostri clienti lo meritano.",
     "navTitle": "Navigazione",
     "contactTitle": "Contatti",
     "legalTitle": "Informazioni",

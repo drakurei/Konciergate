@@ -6,11 +6,11 @@ import { asset } from "@/lib/utils";
 
 const TIMES = ["08:00", "10:00", "13:00", "18:00", "22:00"];
 const MEDIA = [
-  { video: "/videos/destinations/dubai.mp4", poster: "/videos/destinations/dubai.jpg" },
-  { video: "/videos/hero.mp4", poster: "/videos/hero-poster.jpg" },
+  { video: "/videos/journey/airport.mp4", poster: "/videos/journey/airport.jpg" },
+  { video: "/videos/journey/vclass.mp4", poster: "/videos/journey/vclass.jpg" },
   { video: "/videos/loader.mp4", poster: "/videos/loader-poster.jpg" },
-  { video: "/videos/destinations/madrid.mp4", poster: "/videos/destinations/madrid.jpg" },
-  { video: "/videos/destinations/geneve.mp4", poster: "/videos/destinations/geneve.jpg" },
+  { video: "/videos/journey/vip.mp4", poster: "/videos/journey/vip.jpg" },
+  { video: "/videos/hero.mp4", poster: "/videos/hero-poster.jpg" },
 ];
 
 /**

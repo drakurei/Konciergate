@@ -51,7 +51,7 @@ export function Logo({
       >
         K
       </text>
-      <circle cx="68" cy="60" r="4.4" fill="#b8925a" />
+      <circle cx="68" cy="60" r="4.4" fill={stroke} />
     </svg>
   );
 }

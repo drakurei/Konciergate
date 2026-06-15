@@ -42,14 +42,14 @@ export default function OpengraphImage() {
               width: 13,
               height: 13,
               borderRadius: "50%",
-              background: "#b8925a",
+              background: "#ffffff",
             }}
           />
         </div>
         <div style={{ fontSize: 40, letterSpacing: 14, fontWeight: 300 }}>
           KONCIERGATE
         </div>
-        <div style={{ fontSize: 26, color: "#b8925a", marginTop: 26 }}>
+        <div style={{ fontSize: 26, color: "#d2d2d7", marginTop: 26 }}>
           L&apos;Europe comme vos clients la méritent.
         </div>
       </div>

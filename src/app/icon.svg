@@ -2,5 +2,5 @@
   <rect width="100" height="100" rx="20" fill="#000000"/>
   <rect x="20" y="20" width="60" height="60" fill="none" stroke="#ffffff" stroke-width="3"/>
   <text x="40" y="64" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="40" font-weight="500" fill="#ffffff">K</text>
-  <circle cx="62" cy="60" r="4" fill="#b8925a"/>
+  <circle cx="62" cy="60" r="4" fill="#ffffff"/>
 </svg>

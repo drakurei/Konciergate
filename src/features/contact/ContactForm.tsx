@@ -144,7 +144,7 @@ export function ContactForm() {
         <label className="flex items-start gap-3 text-sm text-muted">
           <input
             type="checkbox"
-            className="mt-0.5 h-4 w-4 shrink-0 accent-[#b8925a]"
+            className="mt-0.5 h-4 w-4 shrink-0 accent-[#1d1d1f]"
             {...register("consent")}
           />
           <span>{t("consent")}</span>

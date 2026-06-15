@@ -73,11 +73,11 @@ export function Navbar() {
                 <Link
                   href={route.href}
                   className={cn(
-                    "relative text-sm tracking-tight transition-colors after:absolute after:-bottom-1.5 after:left-0 after:h-px after:bg-gold after:transition-all after:duration-300",
+                    "relative text-sm tracking-tight transition-colors after:absolute after:-bottom-1.5 after:left-0 after:h-px after:bg-current after:transition-all after:duration-300",
                     active ? "after:w-full" : "after:w-0 hover:after:w-full",
                     solid
                       ? active
-                        ? "text-gold"
+                        ? "text-ink"
                         : "text-ink/80 hover:text-ink"
                       : active
                         ? "text-white"

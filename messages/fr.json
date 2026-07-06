@@ -98,7 +98,7 @@
       "title": "Une exigence mesurable.",
       "items": [
         { "value": "15+", "label": "clubs" },
-        { "value": "5", "label": "pays" },
+        { "value": "6", "label": "destinations" },
         { "value": "100%", "label": "sur mesure" },
         { "value": "24h", "label": "de réponse" }
       ]
@@ -381,6 +381,23 @@
         "consent": "Veuillez accepter le traitement de vos données."
       }
     }
+  },
+  "chatbot": {
+    "open": "Ouvrir l'assistant",
+    "close": "Fermer l'assistant",
+    "title": "Assistant Konciergate",
+    "subtitle": "Réponse immédiate",
+    "intro": "Bonjour 👋 Je suis l'assistant Konciergate. Comment puis-je vous aider ?",
+    "learnMore": "En savoir plus",
+    "whatsapp": "Continuer sur WhatsApp",
+    "whatsappMessage": "Bonjour Konciergate, j'ai une question.",
+    "questions": [
+      { "q": "Vos services de transport ?", "a": "Nous disposons d'une flotte Mercedes (Classe V, Sprinter VIP, Autocar) avec chauffeur professionnel, pour vos transferts VIP, groupes et événements." },
+      { "q": "C'est quoi K.ORIGINAL ?", "a": "K.ORIGINAL, ce sont nos expériences football : tours interactifs, Match Day & VIP, accès pelouse et expériences exclusives auprès de plus de 15 clubs." },
+      { "q": "Quelles destinations ?", "a": "Paris, Madrid, Milan, Londres, Genève et Dubaï — et bien d'autres sur demande, partout dans le monde." },
+      { "q": "Organisez-vous des événements ?", "a": "Oui : séminaires, événements d'entreprise et réceptions privées, orchestrés de bout en bout." },
+      { "q": "Obtenir un devis ?", "a": "Le plus simple est de nous écrire sur WhatsApp ou via la page Contact : réponse sous 24 h." }
+    ]
   },
   "footer": {
     "tagline": "Le monde comme vos clients le méritent.",

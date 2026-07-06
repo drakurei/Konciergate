@@ -2,18 +2,16 @@
 
 import { asset } from "@/lib/utils";
 
-/** Clubs partenaires — logos officiels + nom. */
+/** Clubs partenaires (partenariats espagnols) — logos officiels + nom. */
 const CLUBS = [
-  { name: "PSG", file: "psg.svg" },
   { name: "Real Madrid", file: "real-madrid.svg" },
   { name: "FC Barcelona", file: "barcelona.png" },
-  { name: "Manchester City", file: "man-city.png" },
-  { name: "Bayern Munich", file: "bayern.png" },
-  { name: "AC Milan", file: "ac-milan.png" },
-  { name: "Inter Milan", file: "inter.png" },
-  { name: "Arsenal", file: "arsenal.png" },
-  { name: "Liverpool", file: "liverpool.svg" },
-  { name: "Chelsea", file: "chelsea.svg" },
+  { name: "Atlético de Madrid", file: "atletico.png" },
+  { name: "Real Sociedad", file: "real-sociedad.png" },
+  { name: "Athletic Bilbao", file: "athletic.png" },
+  { name: "Girona FC", file: "girona.png" },
+  { name: "Valencia CF", file: "valencia.png" },
+  { name: "RCD Mallorca", file: "mallorca.png" },
 ];
 
 function ClubCard({ name, file }: { name: string; file: string }) {

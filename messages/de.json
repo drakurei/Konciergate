@@ -98,7 +98,7 @@
       "title": "Messbare Exzellenz.",
       "items": [
         { "value": "15+", "label": "Vereine" },
-        { "value": "5", "label": "Länder" },
+        { "value": "6", "label": "Reiseziele" },
         { "value": "100%", "label": "maßgeschneidert" },
         { "value": "24h", "label": "Reaktionszeit" }
       ]
@@ -381,6 +381,23 @@
         "consent": "Bitte stimmen Sie der Verarbeitung Ihrer Daten zu."
       }
     }
+  },
+  "chatbot": {
+    "open": "Assistent öffnen",
+    "close": "Assistent schließen",
+    "title": "Konciergate-Assistent",
+    "subtitle": "Sofortige Antwort",
+    "intro": "Hallo 👋 Ich bin der Konciergate-Assistent. Wie kann ich helfen?",
+    "learnMore": "Mehr erfahren",
+    "whatsapp": "Auf WhatsApp fortfahren",
+    "whatsappMessage": "Hallo Konciergate, ich habe eine Frage.",
+    "questions": [
+      { "q": "Ihre Transportservices?", "a": "Wir betreiben eine Mercedes-Flotte (V-Klasse, Sprinter VIP, Reisebus) mit professionellen Chauffeuren — für VIP-Transfers, Gruppen und Events." },
+      { "q": "Was ist K.ORIGINAL?", "a": "K.ORIGINAL sind unsere Fußballerlebnisse: interaktive Touren, Match Day & VIP, Rasenzugang und exklusive Erlebnisse bei über 15 Vereinen." },
+      { "q": "Welche Reiseziele?", "a": "Paris, Madrid, Mailand, London, Genf und Dubai — und viele mehr auf Anfrage, weltweit." },
+      { "q": "Organisieren Sie Events?", "a": "Ja: Seminare, Firmenevents und private Empfänge, von Anfang bis Ende orchestriert." },
+      { "q": "Ein Angebot erhalten?", "a": "Am einfachsten schreiben Sie uns auf WhatsApp oder über die Kontaktseite: Antwort innerhalb von 24 h." }
+    ]
   },
   "footer": {
     "tagline": "Die Welt, wie es Ihre Kunden verdienen.",

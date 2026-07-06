@@ -63,11 +63,21 @@ export function HeroVideo() {
         }}
       />
 
-      {/* Contenu : uniquement les CTA, positionnés en bas */}
+      {/* Contenu : marque discrète + CTA, positionnés en bas */}
       <div
         ref={contentRef}
         className="shell relative z-10 flex flex-col items-center pb-14 text-center md:pb-16"
       >
+        {/* h1 accessible + SEO (marque), visuellement discret */}
+        <h1 data-hero-item className="mb-3 text-sm font-medium uppercase tracking-[0.35em] text-white/90 opacity-0 md:text-base">
+          {t("title")}
+        </h1>
+        <p
+          data-hero-item
+          className="mb-7 max-w-md text-base font-light text-white/70 opacity-0 md:text-lg"
+        >
+          {t("subtitle")}
+        </p>
         <div
           data-hero-item
           className="flex flex-col items-center gap-4 opacity-0 sm:flex-row"

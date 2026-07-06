@@ -12,7 +12,7 @@ export function Footer() {
     legal: tLegal("title"),
     privacy: tPrivacy("title"),
   };
-  const year = 2025;
+  const year = new Date().getFullYear();
 
   return (
     <footer className="border-t border-line-dark bg-black text-white">

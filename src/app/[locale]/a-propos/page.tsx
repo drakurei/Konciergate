@@ -28,7 +28,7 @@ const TIMELINE_IMAGES = [
   "/images/apropos-hero.jpg",
   "/images/receptif-concierge.jpg",
   "/images/event-hero.jpg",
-  "/videos/destinations/dubai.jpg",
+  "/images/destination-uk.jpg",
 ];
 
 const COULISSES = [
@@ -223,19 +223,15 @@ export default async function AProposPage({
       {/* S9 — Chiffres */}
       <Stats />
 
-      {/* S10 — Final */}
+      {/* S10 — Final (vraie photo, ambiance naturelle) */}
       <section className="relative flex h-[90svh] min-h-[520px] items-center justify-center overflow-hidden bg-black text-center">
-        <video
-          className="absolute inset-0 h-full w-full object-cover"
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="none"
-          poster={asset("/videos/hero-poster.jpg")}
-        >
-          <source src={asset("/videos/hero.mp4")} type="video/mp4" />
-        </video>
+        <Image
+          src={asset("/images/destination-france.jpg")}
+          alt=""
+          fill
+          sizes="100vw"
+          className="object-cover"
+        />
         <div className="absolute inset-0 bg-black/55" />
         <div className="shell relative z-10 flex flex-col items-center">
           <Reveal>

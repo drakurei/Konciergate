@@ -98,7 +98,7 @@
       "title": "可衡量的卓越。",
       "items": [
         { "value": "15+", "label": "俱乐部" },
-        { "value": "5", "label": "国家" },
+        { "value": "6", "label": "目的地" },
         { "value": "100%", "label": "定制" },
         { "value": "24h", "label": "响应" }
       ]
@@ -375,6 +375,23 @@
         "consent": "请同意处理您的数据。"
       }
     }
+  },
+  "chatbot": {
+    "open": "打开助手",
+    "close": "关闭助手",
+    "title": "Konciergate 助手",
+    "subtitle": "即时回复",
+    "intro": "您好 👋 我是 Konciergate 助手，有什么可以帮您？",
+    "learnMore": "了解更多",
+    "whatsapp": "在 WhatsApp 继续",
+    "whatsappMessage": "您好 Konciergate，我有一个问题。",
+    "questions": [
+      { "q": "你们的交通服务？", "a": "我们拥有梅赛德斯车队（V 级、Sprinter VIP、大巴）及专业司机，服务 VIP 接送、团队与活动。" },
+      { "q": "什么是 K.ORIGINAL？", "a": "K.ORIGINAL 是我们的足球体验系列：互动球场之旅、比赛日与 VIP、草坪通道及超过 15 家俱乐部的专属体验。" },
+      { "q": "有哪些目的地？", "a": "巴黎、马德里、米兰、伦敦、日内瓦与迪拜——更多目的地可应需安排，遍及全球。" },
+      { "q": "你们组织活动吗？", "a": "是的：研讨会、企业活动与私人招待，全程精心策划。" },
+      { "q": "如何获取报价？", "a": "最简单的方式是通过 WhatsApp 或联系页面写信给我们：24 小时内回复。" }
+    ]
   },
   "footer": {
     "tagline": "为您的客户呈现应有的世界。",

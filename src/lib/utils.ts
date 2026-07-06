@@ -11,7 +11,9 @@ export function cn(...inputs: ClassValue[]) {
  * next/image n'ajoute pas le basePath aux src en chaîne — on le fait nous-mêmes.
  */
 export const BASE_PATH =
-  process.env.NEXT_PUBLIC_STATIC_EXPORT === "true" ? "/Konciergate" : "";
+  process.env.NEXT_PUBLIC_STATIC_EXPORT === "true"
+    ? (process.env.NEXT_PUBLIC_BASE_PATH ?? "/Konciergate")
+    : "";
 
 /** Préfixe un chemin d'asset public avec le basePath (images, vidéos, icônes). */
 export function asset(path: string): string {

@@ -10,8 +10,12 @@ const withNextIntl = createNextIntlPlugin("./src/i18n/request.ts");
  */
 const isStaticExport = process.env.NEXT_PUBLIC_STATIC_EXPORT === "true";
 
-/** Nom du dépôt = sous-chemin GitHub Pages (drakurei.github.io/Konciergate). */
-const repoBasePath = "/Konciergate";
+/**
+ * Sous-chemin de déploiement. Par défaut "/Konciergate" (GitHub Pages).
+ * Pour un export à la racine d'un domaine (hébergement classique) :
+ * NEXT_PUBLIC_BASE_PATH="" lors du build.
+ */
+const repoBasePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "/Konciergate";
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
@@ -27,9 +31,10 @@ const nextConfig: NextConfig = {
   ...(isStaticExport
     ? {
         output: "export" as const,
-        basePath: repoBasePath,
-        assetPrefix: `${repoBasePath}/`,
         trailingSlash: true,
+        ...(repoBasePath
+          ? { basePath: repoBasePath, assetPrefix: `${repoBasePath}/` }
+          : {}),
       }
     : {}),
 };

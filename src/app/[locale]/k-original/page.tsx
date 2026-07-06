@@ -7,8 +7,40 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Reveal } from "@/components/ui/Reveal";
 import { ClubsMarquee } from "@/features/koriginal/ClubsMarquee";
 import { KoExperience } from "@/features/koriginal/KoExperience";
+import { KoFinale } from "@/features/koriginal/KoFinale";
 import { CtaBand } from "@/components/layout/CtaBand";
 import { whatsappUrl } from "@/lib/site";
+
+/** Icônes des billets/expériences (ticket, guide officiel, immersif, match day). */
+const EXPERIENCE_ICONS = [
+  <svg key="ticket" width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden>
+    <path
+      d="M4 8a2 2 0 0 0 2-2h12a2 2 0 0 0 2 2v2a2 2 0 1 0 0 4v2a2 2 0 0 0-2 2H6a2 2 0 0 0-2-2v-2a2 2 0 1 0 0-4V8Z"
+      stroke="currentColor"
+      strokeWidth="1.5"
+      strokeLinejoin="round"
+    />
+    <path d="M14 7v2M14 11v2M14 15v2" stroke="currentColor" strokeWidth="1.5" />
+  </svg>,
+  <svg key="guide" width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden>
+    <circle cx="9" cy="8" r="3" stroke="currentColor" strokeWidth="1.5" />
+    <path d="M4 20c0-2.8 2.2-5 5-5s5 2.2 5 5" stroke="currentColor" strokeWidth="1.5" />
+    <path d="M17 4v9M17 4h4l-1.4 2L21 8h-4" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" />
+  </svg>,
+  <svg key="vr" width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden>
+    <path
+      d="M3 9a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-3.2a2 2 0 0 1-1.6-.8l-.9-1.2a1.6 1.6 0 0 0-2.6 0l-.9 1.2a2 2 0 0 1-1.6.8H5a2 2 0 0 1-2-2V9Z"
+      stroke="currentColor"
+      strokeWidth="1.5"
+      strokeLinejoin="round"
+    />
+  </svg>,
+  <svg key="matchday" width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden>
+    <path d="M3 16c0-4 4-7 9-7s9 3 9 7" stroke="currentColor" strokeWidth="1.5" />
+    <path d="M3 16h18M7 16v3M12 16v3M17 16v3" stroke="currentColor" strokeWidth="1.5" />
+    <circle cx="12" cy="5.5" r="1.5" stroke="currentColor" strokeWidth="1.5" />
+  </svg>,
+];
 
 type Item = { title: string; text: string };
 
@@ -110,8 +142,8 @@ export default async function KOriginalPage({
             {experiences.map((exp, i) => (
               <Reveal as="li" key={exp} delay={i * 0.06}>
                 <div className="flex items-center gap-6 py-6">
-                  <span className="text-sm font-medium tabular-nums text-gold">
-                    {String(i + 1).padStart(2, "0")}
+                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-ink/15 text-ink">
+                    {EXPERIENCE_ICONS[i] ?? EXPERIENCE_ICONS[0]}
                   </span>
                   <span className="text-xl font-light tracking-tight text-ink md:text-2xl">
                     {exp}
@@ -124,6 +156,9 @@ export default async function KOriginalPage({
       </section>
 
       <CtaBand title={t("hero.title")} buttonLabel={t("experiences.cta")} />
+
+      {/* Final signature — panorama stade + marque géante (fidèle à l'original) */}
+      <KoFinale />
     </>
   );
 }

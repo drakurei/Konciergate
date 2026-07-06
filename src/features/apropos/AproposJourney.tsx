@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
-import { asset } from "@/lib/utils";
+import { SmartVideo } from "@/components/ui/SmartVideo";
 
 const TIMES = ["08:00", "10:00", "13:00", "18:00", "22:00"];
 const MEDIA = [
@@ -14,9 +14,10 @@ const MEDIA = [
 ];
 
 /**
- * « Une journée avec Konciergate » : narration immersive. Chaque moment occupe
- * l'écran, sa vidéo se lance quand il entre dans le viewport (lazy) et se met
- * en pause en sortie. Le texte apparaît au scroll.
+ * « Une journée avec Konciergate » — narration immersive.
+ * Desktop : chaque moment plein écran (80svh), texte superposé.
+ * Mobile : vidéo en 16:9 ENTIER (aucun recadrage destructeur) + heure dessous.
+ * Les vidéos se lancent à l'entrée dans le viewport (lazy) et se mettent en pause.
  */
 export function AproposJourney({ title, items }: { title: string; items: string[] }) {
   const ref = useRef<HTMLDivElement>(null);
@@ -26,6 +27,7 @@ export function AproposJourney({ title, items }: { title: string; items: string[
     if (!el) return;
     const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     const moments = el.querySelectorAll("[data-moment]");
+    const animated = new WeakSet<Element>();
     const io = new IntersectionObserver(
       (entries) => {
         entries.forEach((e) => {
@@ -33,7 +35,8 @@ export function AproposJourney({ title, items }: { title: string; items: string[
           const content = e.target.querySelector("[data-content]");
           if (e.isIntersecting) {
             if (v) v.play().catch(() => {});
-            if (content && !reduce) {
+            if (content && !reduce && !animated.has(e.target)) {
+              animated.add(e.target);
               gsap.fromTo(
                 content,
                 { opacity: 0, y: 30 },
@@ -45,7 +48,7 @@ export function AproposJourney({ title, items }: { title: string; items: string[
           }
         });
       },
-      { threshold: 0.5 },
+      { threshold: 0.4 },
     );
     moments.forEach((m) => io.observe(m));
     return () => io.disconnect();
@@ -53,7 +56,7 @@ export function AproposJourney({ title, items }: { title: string; items: string[
 
   return (
     <section className="bg-black">
-      <div className="shell py-16 md:py-20">
+      <div className="shell py-14 md:py-20">
         <h2 className="text-3xl font-light tracking-tight text-white md:text-5xl">{title}</h2>
       </div>
       <div ref={ref}>
@@ -61,24 +64,28 @@ export function AproposJourney({ title, items }: { title: string; items: string[
           <div
             data-moment
             key={label}
-            className="relative flex h-[80svh] min-h-[480px] items-end overflow-hidden border-t border-white/10"
+            className="border-t border-white/10 md:relative md:flex md:h-[80svh] md:min-h-[480px] md:items-end md:overflow-hidden"
           >
-            <video
-              className="absolute inset-0 h-full w-full object-cover"
-              muted
-              loop
-              playsInline
-              preload="none"
-              poster={asset(MEDIA[i]?.poster ?? "/videos/hero-poster.jpg")}
+            {/* Média : ratio 16:9 complet sur mobile, plein écran sur desktop */}
+            <div className="relative aspect-video w-full md:absolute md:inset-0 md:aspect-auto md:h-full">
+              <SmartVideo
+                src={MEDIA[i]?.video ?? "/videos/hero.mp4"}
+                poster={MEDIA[i]?.poster ?? "/videos/hero-poster.jpg"}
+                preload="none"
+                className="absolute inset-0 h-full w-full object-cover"
+              />
+              <div className="absolute inset-0 hidden bg-gradient-to-t from-black/80 via-black/20 to-black/30 md:block" />
+            </div>
+
+            {/* Texte : sous la vidéo sur mobile, superposé sur desktop */}
+            <div
+              data-content
+              className="shell relative z-10 py-7 md:py-0 md:pb-20"
             >
-              <source src={asset(MEDIA[i]?.video ?? "/videos/hero.mp4")} type="video/mp4" />
-            </video>
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-black/30" />
-            <div data-content className="shell relative z-10 pb-16 md:pb-20">
-              <span className="block text-5xl font-semibold tracking-tight text-white tabular-nums md:text-7xl">
+              <span className="block text-4xl font-semibold tracking-tight text-white tabular-nums md:text-7xl">
                 {TIMES[i]}
               </span>
-              <span className="mt-3 block text-lg uppercase tracking-[0.18em] text-white/75 md:text-xl">
+              <span className="mt-2 block text-base uppercase tracking-[0.18em] text-white/75 md:mt-3 md:text-xl">
                 {label}
               </span>
             </div>

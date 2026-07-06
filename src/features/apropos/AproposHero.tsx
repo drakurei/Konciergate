@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
-import { asset } from "@/lib/utils";
+import { SmartVideo } from "@/components/ui/SmartVideo";
 
 /**
  * Hero cinématographique : vidéo plein écran + révélation séquentielle de
@@ -37,17 +37,12 @@ export function AproposHero({ lines }: { lines: string[] }) {
       ref={ref}
       className="relative flex h-[100svh] min-h-[620px] items-center justify-center overflow-hidden bg-black"
     >
-      <video
-        className="absolute inset-0 h-full w-full object-cover"
+      <SmartVideo
+        src="/videos/hero.mp4"
+        poster="/videos/hero-poster.jpg"
         autoPlay
-        muted
-        loop
-        playsInline
-        preload="auto"
-        poster={asset("/videos/hero-poster.jpg")}
-      >
-        <source src={asset("/videos/hero.mp4")} type="video/mp4" />
-      </video>
+        className="absolute inset-0 h-full w-full object-cover"
+      />
       <div
         className="absolute inset-0"
         style={{

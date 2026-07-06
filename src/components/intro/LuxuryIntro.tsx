@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
-import { asset } from "@/lib/utils";
+import { SmartVideo } from "@/components/ui/SmartVideo";
 
 const SESSION_KEY = "introSeen";
 const LETTERS = "KONCIERGATE".split("");
@@ -87,17 +87,12 @@ export function LuxuryIntro() {
 
   return (
     <div ref={rootRef} className="fixed inset-0 z-[300] overflow-hidden bg-black">
-      <video
-        className="absolute inset-0 h-full w-full object-cover"
+      <SmartVideo
+        src="/videos/loader.mp4"
+        poster="/videos/loader-poster.jpg"
         autoPlay
-        muted
-        loop
-        playsInline
-        preload="auto"
-        poster={asset("/videos/loader-poster.jpg")}
-      >
-        <source src={asset("/videos/loader.mp4")} type="video/mp4" />
-      </video>
+        className="absolute inset-0 h-full w-full object-cover"
+      />
 
       {/* Overlay noir léger */}
       <div className="absolute inset-0 bg-black/40" />

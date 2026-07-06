@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
-import { asset } from "@/lib/utils";
+import { SmartVideo } from "@/components/ui/SmartVideo";
 import { cityVideo, cityPoster } from "./cities";
 
 /** Hero vidéo plein écran (100vh) d'une page destination + titre animé GSAP. */
@@ -37,17 +37,12 @@ export function DestinationHero({
 
   return (
     <section ref={ref} className="relative h-[100svh] min-h-[560px] overflow-hidden bg-black">
-      <video
-        className="absolute inset-0 h-full w-full object-cover"
+      <SmartVideo
+        src={cityVideo(slug)}
+        poster={cityPoster(slug)}
         autoPlay
-        muted
-        loop
-        playsInline
-        preload="auto"
-        poster={asset(cityPoster(slug))}
-      >
-        <source src={asset(cityVideo(slug))} type="video/mp4" />
-      </video>
+        className="absolute inset-0 h-full w-full object-cover"
+      />
       <div
         className="absolute inset-0"
         style={{

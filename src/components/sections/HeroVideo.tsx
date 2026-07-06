@@ -4,8 +4,8 @@ import { useEffect, useRef } from "react";
 import { useTranslations } from "next-intl";
 import gsap from "gsap";
 import { Button } from "@/components/ui/Button";
+import { SmartVideo } from "@/components/ui/SmartVideo";
 import { whatsappUrl } from "@/lib/site";
-import { asset } from "@/lib/utils";
 
 /**
  * Hero principal avec fond vidéo Konciergate (autoplay, muted, loop,
@@ -41,18 +41,13 @@ export function HeroVideo() {
 
   return (
     <section className="relative flex h-[100svh] min-h-[640px] items-end justify-center overflow-hidden bg-black">
-      {/* Fond vidéo */}
-      <video
-        className="absolute inset-0 h-full w-full object-cover"
+      {/* Fond vidéo (480p servie sur mobile) */}
+      <SmartVideo
+        src="/videos/hero.mp4"
+        poster="/videos/hero-poster.jpg"
         autoPlay
-        muted
-        loop
-        playsInline
-        preload="auto"
-        poster={asset("/videos/hero-poster.jpg")}
-      >
-        <source src={asset("/videos/hero.mp4")} type="video/mp4" />
-      </video>
+        className="absolute inset-0 h-full w-full object-cover"
+      />
 
       {/* Overlay dégradé */}
       <div

@@ -1,23 +1,24 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import Image from "next/image";
 import gsap from "gsap";
-import { SmartVideo } from "@/components/ui/SmartVideo";
+import { asset } from "@/lib/utils";
 
 const TIMES = ["08:00", "10:00", "13:00", "18:00", "22:00"];
-const MEDIA = [
-  { video: "/videos/journey/airport.mp4", poster: "/videos/journey/airport.jpg" },
-  { video: "/videos/journey/vclass.mp4", poster: "/videos/journey/vclass.jpg" },
-  { video: "/videos/loader.mp4", poster: "/videos/loader-poster.jpg" },
-  { video: "/videos/journey/vip.mp4", poster: "/videos/journey/vip.jpg" },
-  { video: "/videos/hero.mp4", poster: "/videos/hero-poster.jpg" },
+const IMAGES = [
+  "/images/journey/airport.jpg",
+  "/images/journey/transfert.jpg",
+  "/images/journey/hotel.jpg",
+  "/images/journey/vip.jpg",
+  "/images/journey/retour.jpg",
 ];
 
 /**
- * « Une journée avec Konciergate » — narration immersive.
+ * « Une journée avec Konciergate » — narration en IMAGES (sans vidéo).
  * Desktop : chaque moment plein écran (80svh), texte superposé.
- * Mobile : vidéo en 16:9 ENTIER (aucun recadrage destructeur) + heure dessous.
- * Les vidéos se lancent à l'entrée dans le viewport (lazy) et se mettent en pause.
+ * Mobile : image en 16:9 entier + heure dessous.
+ * Au scroll : léger zoom d'apparition sur l'image + reveal du texte (GSAP).
  */
 export function AproposJourney({ title, items }: { title: string; items: string[] }) {
   const ref = useRef<HTMLDivElement>(null);
@@ -27,28 +28,35 @@ export function AproposJourney({ title, items }: { title: string; items: string[
     if (!el) return;
     const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     const moments = el.querySelectorAll("[data-moment]");
-    const animated = new WeakSet<Element>();
+    if (reduce) {
+      moments.forEach((m) => {
+        const img = m.querySelector("[data-img]");
+        const content = m.querySelector("[data-content]");
+        gsap.set([img, content], { opacity: 1, y: 0, scale: 1 });
+      });
+      return;
+    }
+    const done = new WeakSet<Element>();
     const io = new IntersectionObserver(
       (entries) => {
         entries.forEach((e) => {
-          const v = e.target.querySelector("video") as HTMLVideoElement | null;
+          if (!e.isIntersecting || done.has(e.target)) return;
+          done.add(e.target);
+          const img = e.target.querySelector("[data-img]");
           const content = e.target.querySelector("[data-content]");
-          if (e.isIntersecting) {
-            if (v) v.play().catch(() => {});
-            if (content && !reduce && !animated.has(e.target)) {
-              animated.add(e.target);
-              gsap.fromTo(
-                content,
-                { opacity: 0, y: 30 },
-                { opacity: 1, y: 0, duration: 1, ease: "power3.out" },
-              );
-            }
-          } else if (v) {
-            v.pause();
-          }
+          gsap.fromTo(
+            img,
+            { scale: 1.08, opacity: 0.6 },
+            { scale: 1, opacity: 1, duration: 1.6, ease: "power2.out" },
+          );
+          gsap.fromTo(
+            content,
+            { opacity: 0, y: 30 },
+            { opacity: 1, y: 0, duration: 1, ease: "power3.out", delay: 0.15 },
+          );
         });
       },
-      { threshold: 0.4 },
+      { threshold: 0.35 },
     );
     moments.forEach((m) => io.observe(m));
     return () => io.disconnect();
@@ -66,22 +74,22 @@ export function AproposJourney({ title, items }: { title: string; items: string[
             key={label}
             className="border-t border-white/10 md:relative md:flex md:h-[80svh] md:min-h-[480px] md:items-end md:overflow-hidden"
           >
-            {/* Média : ratio 16:9 complet sur mobile, plein écran sur desktop */}
-            <div className="relative aspect-video w-full md:absolute md:inset-0 md:aspect-auto md:h-full">
-              <SmartVideo
-                src={MEDIA[i]?.video ?? "/videos/hero.mp4"}
-                poster={MEDIA[i]?.poster ?? "/videos/hero-poster.jpg"}
-                preload="none"
-                className="absolute inset-0 h-full w-full object-cover"
-              />
+            {/* Image : 16:9 entier sur mobile, plein écran sur desktop */}
+            <div className="relative aspect-video w-full overflow-hidden md:absolute md:inset-0 md:aspect-auto md:h-full">
+              <div data-img className="absolute inset-0 will-change-transform">
+                <Image
+                  src={asset(IMAGES[i] ?? IMAGES[0]!)}
+                  alt={label}
+                  fill
+                  sizes="100vw"
+                  className="object-cover"
+                />
+              </div>
               <div className="absolute inset-0 hidden bg-gradient-to-t from-black/80 via-black/20 to-black/30 md:block" />
             </div>
 
-            {/* Texte : sous la vidéo sur mobile, superposé sur desktop */}
-            <div
-              data-content
-              className="shell relative z-10 py-7 md:py-0 md:pb-20"
-            >
+            {/* Texte : sous l'image sur mobile, superposé sur desktop */}
+            <div data-content className="shell relative z-10 py-7 md:py-0 md:pb-20">
               <span className="block text-4xl font-semibold tracking-tight text-white tabular-nums md:text-7xl">
                 {TIMES[i]}
               </span>

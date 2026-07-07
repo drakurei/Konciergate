@@ -24,7 +24,7 @@ if exist "%TEMP%\kg_api_bk" move "%TEMP%\kg_api_bk" "src\app\api" >nul 2>&1
 if not %BUILD_ERR%==0 (
   echo.
   echo *** ERREUR DE BUILD - le site Local n'a PAS ete modifie. ***
-  pause
+  if /I not "%~1"=="auto" pause
   exit /b 1
 )
 
@@ -49,4 +49,5 @@ echo.
 echo   Ouvre :  http://konciergate.local
 echo   (Ctrl+F5 dans le navigateur pour vider le cache)
 echo.
-pause
+if /I not "%~1"=="auto" pause
+exit /b 0

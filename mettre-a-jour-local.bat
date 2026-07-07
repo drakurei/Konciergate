@@ -29,16 +29,18 @@ if not %BUILD_ERR%==0 (
 )
 
 echo.
-echo [2/4] Page de redirection racine...
-copy /Y "scripts\root-index.html" "out\index.html" >nul
+echo [2/4] Preparation...
+del /Q "out\index.html" >nul 2>&1
 
 echo.
-echo [3/4] Copie vers Local (%LOCAL_PUBLIC%)...
-robocopy "out" "%LOCAL_PUBLIC%" /MIR /NFL /NDL /NJH /NJS /NP >nul
-if %ERRORLEVEL% GEQ 8 (
-  echo *** ERREUR DE COPIE vers Local. ***
-  pause
-  exit /b 1
+echo [3/4] Copie vers Local (%LOCAL_PUBLIC%) — WordPress preserve...
+REM Synchronise uniquement les dossiers/fichiers du site statique.
+REM Ne touche JAMAIS a index.php ni aux dossiers wp-* (WordPress + wp-admin).
+for /D %%D in ("out\*") do (
+  robocopy "%%D" "%LOCAL_PUBLIC%\%%~nxD" /MIR /NFL /NDL /NJH /NJS /NP >nul
+)
+for %%F in ("out\*") do (
+  copy /Y "%%F" "%LOCAL_PUBLIC%\" >nul
 )
 
 echo.

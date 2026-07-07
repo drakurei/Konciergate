@@ -12,10 +12,12 @@ const isStaticExport = process.env.NEXT_PUBLIC_STATIC_EXPORT === "true";
 
 /**
  * Sous-chemin de déploiement. Par défaut "/Konciergate" (GitHub Pages).
- * Pour un export à la racine d'un domaine (hébergement classique) :
- * NEXT_PUBLIC_BASE_PATH="" lors du build.
+ * Pour un export à la racine d'un domaine (hébergement classique / Local) :
+ * NEXT_PUBLIC_BASE_PATH="" ou "/" lors du build.
  */
-const repoBasePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "/Konciergate";
+const rawBasePath = process.env.NEXT_PUBLIC_BASE_PATH;
+const repoBasePath =
+  rawBasePath === undefined ? "/Konciergate" : rawBasePath === "/" ? "" : rawBasePath;
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,

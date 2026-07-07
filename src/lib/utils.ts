@@ -10,9 +10,14 @@ export function cn(...inputs: ClassValue[]) {
  * Préfixe de base : "/Konciergate" en export statique (GitHub Pages), "" sinon.
  * next/image n'ajoute pas le basePath aux src en chaîne — on le fait nous-mêmes.
  */
+const rawBasePath = process.env.NEXT_PUBLIC_BASE_PATH;
 export const BASE_PATH =
   process.env.NEXT_PUBLIC_STATIC_EXPORT === "true"
-    ? (process.env.NEXT_PUBLIC_BASE_PATH ?? "/Konciergate")
+    ? rawBasePath === undefined
+      ? "/Konciergate"
+      : rawBasePath === "/"
+        ? ""
+        : rawBasePath
     : "";
 
 /** Préfixe un chemin d'asset public avec le basePath (images, vidéos, icônes). */
